@@ -53,7 +53,7 @@ class Menu extends React.Component {
       return (
         <div className="Menu">
             <img src={logo} className="image"/>
-            <div className="studio_title">Studio Rose</div>
+            <div className="studio_title">Studio Rose (Dev)</div>
             <div className="menu_spacing"></div>
             <MenuBar />
             { /* <Bars className="three_bars"/> */ }
