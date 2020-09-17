@@ -1,26 +1,27 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Menu from './Menu.js';
+import Content from './Content.js';
+import toc from './table_of_contents.yaml';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  getDocs(){
+    return toc.posts;
+  };
+
+  render(){
+    const numbers = this.getDocs();
+    const listItems = numbers.map((number) =>
+      <li key={number.toString()}>{number}</li>
+    );
+    return (
+      <div className="App">
+        <Menu></Menu>
+        <Content></Content>
+      </div>
+    );
+  }
 }
 
 export default App;

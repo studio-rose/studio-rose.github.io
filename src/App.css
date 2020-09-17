@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+
+:root{
+  --main-color: #1a1a20;
+  --main-color-accent: #101018;
+  --body-color: #2a2a38;
+  --sidebar-color: #ccddff;
+  --light-text-color: #d0d0d0;
+  --dark-text-color: #222222;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: var(--body-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Ringside Regular A,Ringside Regular B,Rubik,Lato,Lucida Grande,Lucida Sans Unicode,Tahoma,Sans-Serif;
+  color: var(--light-text-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Menu {
+  height: 60px;
+  background-color: var(--main-color);
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  border-bottom: 1px solid var(--main-color-accent);
+}
+
+.menu_button_bar{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.image {
+  height:100%;
+  width:auto;
+  image-rendering: pixelated;
+}
+
+.studio_title{
+  margin: auto 0px;
+  padding: 0px 8px;
+  font-size: 2em;
+}
+
+.three_bars{
+  height:100%;
+  width:auto;
+  float:right;
+  fill:white;
+  transition:0.2s;
+}
+
+.three_bars:hover, .three_bars:focus{
+  fill:gray;
+}
+
+.content {
+  width:100%;
+  height:100vh;
+  background-color:var(--body-color);
+  position:absolute;
+  display:flex;
+  flex-direction: row;
+}
+
+.sidebar{
+  background-color: var(--sidebar-color);
+  width:200px;
+  height:100%;
+  flex: 0 0 0;
+
+  display:flex;
+  flex-direction: row;
+}
+
+.sidebar_expander{
+  margin: 16px 0px;
+  border-right: 1px solid #aabbee;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center; 
+}
+
+.sidebar_arrow{
+  fill:#aabbee;
+  padding: 0px 8px;
+  margin: auto 0px;
+}
+
+.sidebar_content{
+  color:black;
+  flex: 1 1 0;
+  margin:16px;
+}
+
+
+.menu_button {
   color: white;
+  padding: 8px;
+  border-left: 1px solid var(--main-color-accent);
+  text-decoration: none;
+  display:flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.menu_button_text{
+  margin:auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu_button:active{
+  background-color: var(--main-color-accent);
+}
+
+.menu_button_active{
+  border-bottom: 4px solid white;
+}
+
+.menu_spacing{
+  flex-grow: 1;
+}
+
+
+
+.post_container{
+  margin: 0px 64px;
+  background-color: #888888;
+  height:100%;
+  flex: 1 1 0;
+}
+
+.post_markdown{
+  color:red;
+}
+
+.post_markdown h1{
+  color:blue;
 }
