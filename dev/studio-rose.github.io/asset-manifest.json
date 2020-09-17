@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.16c9f9be.chunk.css",
-    "main.js": "/static/js/main.fc419369.chunk.js",
-    "main.js.map": "/static/js/main.fc419369.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.92ee656d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.92ee656d.js.map",
-    "static/js/2.e4c9c102.chunk.js": "/static/js/2.e4c9c102.chunk.js",
-    "static/js/2.e4c9c102.chunk.js.map": "/static/js/2.e4c9c102.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.ba942bed4ca93530def46b058e111f95.js": "/precache-manifest.ba942bed4ca93530def46b058e111f95.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.16c9f9be.chunk.css.map": "/static/css/main.16c9f9be.chunk.css.map",
-    "static/js/2.e4c9c102.chunk.js.LICENSE.txt": "/static/js/2.e4c9c102.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/static/media/logo.fa0a94fc.svg",
-    "static/media/right.a6a8154d.svg": "/static/media/right.a6a8154d.svg"
+    "main.css": "/dev/studio-rose.github.io/static/css/main.16c9f9be.chunk.css",
+    "main.js": "/dev/studio-rose.github.io/static/js/main.8ae16657.chunk.js",
+    "main.js.map": "/dev/studio-rose.github.io/static/js/main.8ae16657.chunk.js.map",
+    "runtime-main.js": "/dev/studio-rose.github.io/static/js/runtime-main.fc7b7887.js",
+    "runtime-main.js.map": "/dev/studio-rose.github.io/static/js/runtime-main.fc7b7887.js.map",
+    "static/js/2.e4c9c102.chunk.js": "/dev/studio-rose.github.io/static/js/2.e4c9c102.chunk.js",
+    "static/js/2.e4c9c102.chunk.js.map": "/dev/studio-rose.github.io/static/js/2.e4c9c102.chunk.js.map",
+    "index.html": "/dev/studio-rose.github.io/index.html",
+    "precache-manifest.0394d18a59096a8dba7c3f87f86d7799.js": "/dev/studio-rose.github.io/precache-manifest.0394d18a59096a8dba7c3f87f86d7799.js",
+    "service-worker.js": "/dev/studio-rose.github.io/service-worker.js",
+    "static/css/main.16c9f9be.chunk.css.map": "/dev/studio-rose.github.io/static/css/main.16c9f9be.chunk.css.map",
+    "static/js/2.e4c9c102.chunk.js.LICENSE.txt": "/dev/studio-rose.github.io/static/js/2.e4c9c102.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/dev/studio-rose.github.io/static/media/logo.fa0a94fc.svg",
+    "static/media/right.a6a8154d.svg": "/dev/studio-rose.github.io/static/media/right.a6a8154d.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.92ee656d.js",
+    "static/js/runtime-main.fc7b7887.js",
     "static/js/2.e4c9c102.chunk.js",
     "static/css/main.16c9f9be.chunk.css",
-    "static/js/main.fc419369.chunk.js"
+    "static/js/main.8ae16657.chunk.js"
   ]
 }
