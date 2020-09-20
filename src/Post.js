@@ -3,32 +3,36 @@ import './App.css';
 import ReactMarkdown from 'react-markdown';
 import MathJax from 'react-mathjax';
 import RemarkMathPlugin from 'remark-math';
+import hljs from 'highlight.js/lib/core';
+import 'highlight.js/styles/vs2015.css';
+
+hljs.registerLanguage('python', require('highlight.js/lib/languages/python'));
+hljs.registerLanguage('glsl', require('highlight.js/lib/languages/glsl'));
 
 class Post extends React.Component {
-    // UML diagrams? https://mermaid-js.github.io/mermaid/#/
     constructor(props){
         super(props);
         this.state = {
             newProps: {...props,
-            plugins: [
-                
-            ],
-            renderers: {
-              ...props.renderers,
-              math: (props) => 
-                <MathJax.Node formula={props.value} />,
-              inlineMath: (props) =>
-                <MathJax.Node inline formula={props.value} />
+                escapeHtml:false,
+                className:"test_container",
+                plugins: [
+                    
+                ],
             }
-          }
         }
+        console.log("Post created");
     }
+
+    componentDidMount(){
+        hljs.initHighlighting.called = false;
+        hljs.initHighlighting();
+    }
+
     render(){
       return (
         <div className="post_container">
-            <MathJax.Provider input="tex">
-                <ReactMarkdown {...this.state.newProps}/>
-            </MathJax.Provider>
+            <ReactMarkdown {...this.state.newProps}/>
         </div>
       );
     }
