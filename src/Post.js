@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.css';
 import ReactMarkdown from 'react-markdown';
-import MathJax from 'react-mathjax';
-import RemarkMathPlugin from 'remark-math';
 import hljs from 'highlight.js/lib/core';
 import 'highlight.js/styles/vs2015.css';
 
