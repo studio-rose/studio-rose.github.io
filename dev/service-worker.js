@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://studio-rose.github.io/dev/precache-manifest.16427199295087fc3dd13912a1f84da2.js"
+  "https://studio-rose.github.io/dev/precache-manifest.b320c0b93d7b4bb84d87ae3c40e804a1.js"
 );
 
 self.addEventListener('message', (event) => {
