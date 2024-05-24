@@ -1,0 +1,16 @@
+{
+  "name": "Anubis",
+  "moniker": "Judgement",
+  "tarot": 20,
+  "age": "N/A",
+  "height": "N/A",
+  "weight": "N/A",
+  "birthday": "N/A",
+  "attributes": [5, 5, 5, 5, 5, 5],
+
+  "overview": "test",
+  "history": "test",
+  "abilities": "test"
+
+
+}

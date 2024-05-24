@@ -1,0 +1,42 @@
+:root{
+    --main-color-0: #1a1a20;
+    --main-color-1: #202020;
+    --main-color-2: #282828;
+    --main-color-3: #333333;
+
+    --main-color-0-: #0c0c1c;
+    --main-color-1-: #13131f;
+    --main-color-2-: #3e3e4a;
+    --main-color-3-: #5e5e6e;
+
+
+    --main-color-light-0: #efefe7;
+    --main-color-light-1: #e5e5df;
+    --main-color-light-2: #dfdfd7;
+    --main-color-light-3: #444444;
+
+    --main-color: #1a1a20;
+    --main-color-accent: #101018;
+    --body-color: #2a2a38;
+    --sidebar-color: #ccddff;
+
+    --light-text-color: #d0d0d0;
+    --dark-text-color: #222222;
+}
+
+body{
+    background-color: var(--main-color-1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--light-text-color);
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0px;
+}
+
+html {
+    background-color: var(--main-color-0);
+    font-family: Verdana, serif;
+}
