@@ -1,0 +1,1 @@
+const t="Name",o="Moniker",A=-1,r="#888888",a="#AAAAAA",e="N/A",n="N/A",c="N/A",s="N/A",i=[1,2,3,4,5,6],h={name:t,moniker:o,tarot:-1,primary_color:r,secondary_color:a,age:e,height:n,weight:c,birthday:s,attributes:i};export{e as age,i as attributes,s as birthday,h as default,n as height,o as moniker,t as name,r as primary_color,a as secondary_color,A as tarot,c as weight};
