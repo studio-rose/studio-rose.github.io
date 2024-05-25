@@ -8,5 +8,7 @@
   "height": "N/A",
   "weight": "N/A",
   "birthday": "N/A",
-  "attributes": [1, 1, 1, 5, 1, 5]
+  "attributes": [1, 1, 1, 5, 1, 5],
+  "sprite_path": "melody",
+  "markdown_path": "melody"
 }
