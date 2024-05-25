@@ -1,1 +1,0 @@
-const t="Anubis",e="Judgement",b=20,s="N/A",i="N/A",o="N/A",n="N/A",a=[5,5,5,5,5,5],r="test",c="test",h="test",g={name:t,moniker:e,tarot:20,age:s,height:i,weight:o,birthday:n,attributes:a,overview:r,history:c,abilities:h};export{h as abilities,s as age,a as attributes,n as birthday,g as default,i as height,c as history,e as moniker,t as name,r as overview,b as tarot,o as weight};

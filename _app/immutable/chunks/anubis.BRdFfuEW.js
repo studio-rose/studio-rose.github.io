@@ -1,0 +1,1 @@
+const t="Anubis",n="Judgement",c=20,a="N/A",o="N/A",e="N/A",s="N/A",i=[5,5,5,5,5,5],r="anubis",h={name:t,moniker:n,tarot:20,age:a,height:o,weight:e,birthday:s,attributes:i,markdown_path:r};export{a as age,i as attributes,s as birthday,h as default,o as height,r as markdown_path,n as moniker,t as name,c as tarot,e as weight};
