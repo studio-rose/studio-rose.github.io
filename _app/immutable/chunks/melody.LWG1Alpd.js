@@ -19,4 +19,5 @@ Melody
 #### Autonomous Magic Projection
 #### Spatial Control (Teleportation)
 #### Magical Reserves
-#### Memory Manipulation`;export{n as default};
+#### Memory Manipulation
+#### Sentient Illusions`;export{n as default};
