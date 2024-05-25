@@ -8,9 +8,6 @@
   "birthday": "N/A",
   "attributes": [5, 5, 5, 5, 5, 5],
 
-  "overview": "test",
-  "history": "test",
-  "abilities": "test"
-
+  "markdown_path": "anubis"
 
 }

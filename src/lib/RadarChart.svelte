@@ -25,7 +25,7 @@
     export let primary_color;
     export let secondary_color;
 
-    let options = {
+    const options = {
         responsive: true,
         scales: {
             r: {
@@ -50,7 +50,7 @@
         fill:true,
     };
 
-    let radar_data = {
+    $: (radar_data = {
         labels: [
             'STR', 'AGI', 'DEX', 'INT', 'WIS', 'ARC',
         ],
@@ -63,7 +63,7 @@
                 data: attribute_data,
             }
         ],
-    };
+    });
 
 </script>
 

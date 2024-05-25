@@ -4,7 +4,7 @@
     import SvelteMarkdown from 'svelte-markdown'
 
     export let data;
-    let {attributes, moniker, name, primary_color, secondary_color, overview, history, abilities} = data.character;
+    $: ({attributes, moniker, name, primary_color, secondary_color} = data.character);
 
 </script>
 
@@ -49,7 +49,9 @@
 
 <style>
     .character-content {
-        margin: 20px;
+        margin: 8px;
+        height: 100%;
+        overflow:hidden;
     }
 
 </style>

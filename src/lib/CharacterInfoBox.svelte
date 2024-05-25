@@ -1,7 +1,7 @@
 <script>
     import RadarChart from "$lib/RadarChart.svelte";
 
-    export let attribute_data = [];
+    export let attribute_data;
     export let primary_color;
     export let secondary_color;
     export let character;
@@ -38,12 +38,14 @@
 
 <style>
     .content {
+        padding: 4px;
         width: 200px;
         height: 400px;
         border: 1px solid white;
     }
 
     .radar {
-        width:50%;
+        width:80%;
+        margin:auto;
     }
 </style>
