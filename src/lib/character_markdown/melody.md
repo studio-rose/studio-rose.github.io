@@ -20,3 +20,4 @@ Melody
 #### Spatial Control (Teleportation)
 #### Magical Reserves
 #### Memory Manipulation
+#### Sentient Illusions
