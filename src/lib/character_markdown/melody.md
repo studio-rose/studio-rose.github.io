@@ -33,8 +33,8 @@ The Book is the signature Relic of the Magician. Under Melody's control, it can 
 #### Defense Projection
 A series of magical shields and barriers that are impenetrable by most weapons and abilities. 
 
-#### Spatial Control (Teleportation)
-The highest level movement technique, allowing the user to instantaenously teleport to a location at will. Melody has mastered this technique to where she only needs to  
+#### Spatial Control
+The highest level movement technique, allowing the user to instantaneously teleport to a location at will. Melody has mastered this technique to where she only needs to  
 
 #### Memory Manipulation
 Used on Echo to implant a fabricated history at the Starting Village.
@@ -43,4 +43,4 @@ Used on Echo to implant a fabricated history at the Starting Village.
 Used at the **Starting Village** to create the villagers. This illusion fades with her death. 
 
 
-## Notes/Trivia
+## Notes and Trivia

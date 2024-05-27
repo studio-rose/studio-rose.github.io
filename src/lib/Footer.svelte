@@ -1,5 +1,5 @@
 <div>
-<p>Studio Rose (2024 - 2024)</p>
+<p>Studio EaA (2024 - 2024)</p>
 <p>All rights reserved</p>
 </div>
 

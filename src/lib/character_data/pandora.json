@@ -1,0 +1,16 @@
+{
+  "name": "Pandora",
+  "moniker": "The Devil",
+  "tarot": 10,
+  "primary_color": "#FCF39F",
+  "secondary_color": "#5E5028",
+
+
+  "age": "N/A",
+  "height": "N/A",
+  "weight": "N/A",
+  "birthday": "N/A",
+  "attributes": [3,3,3,3,3,3],
+
+  "markdown_path": "pandora"
+}
