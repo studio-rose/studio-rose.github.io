@@ -1,13 +1,13 @@
 <script>
-
+    import { base } from "$app/paths";
 </script>
 
 <nav>
     Navigation
     <br/>
-    <a href="/characters/melody">Melody</a><br/>
-    <a href="/characters/pandora">Pandora</a><br/>
-    <a href="/characters/anubis">Anubis</a><br/>
+    <a href="{base}/characters/melody">Melody</a><br/>
+    <a href="{base}/characters/pandora">Pandora</a><br/>
+    <a href="{base}/characters/anubis">Anubis</a><br/>
 </nav>
 
 <style>
