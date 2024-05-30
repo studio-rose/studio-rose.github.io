@@ -1,14 +1,36 @@
 {
   "name": "Melody",
-  "moniker": "The Magician",
-  "tarot": 1,
   "primary_color": "#FFCCCC22",
   "secondary_color": "#DE9194ff",
-  "age": "N/A",
-  "height": "N/A",
-  "weight": "N/A",
-  "birthday": "N/A",
-  "attributes": [1, 1, 1, 5, 1, 5],
   "sprite_path": "melody",
-  "markdown_path": "melody"
+  "markdown_path": "melody",
+  
+  "characteristics": {
+    "age": "XX",
+    "race": "Demi-Human",
+    "gender": "Female ♀",
+    "hair_color": "Pink",
+    "eye_color": "Pink",
+    "height": "6'0\"",
+    "weight": "N/A"
+  },
+  "trivia": {
+    "birthday": "N/A",
+    "song": "The Island",
+    "color": "#AAAAAA"
+  },
+  "arcana": {
+    "status": "Active",
+    "rank": 1,
+    "tarot": "The Magician",
+    "relic": "The Book"
+  },
+  "attributes": {
+    "STR": 1,
+    "AGI": 1,
+    "INT": 5,
+    "WIS": 2,
+    "MAG": 5,
+    "CON": 4
+  }
 }

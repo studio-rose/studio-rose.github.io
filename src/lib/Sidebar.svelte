@@ -5,9 +5,15 @@
 <nav>
     Navigation
     <br/>
-    <a href="{base}/characters/melody">Melody</a><br/>
+    <a href="{base}/characters/silver">Silver</a><br/>
+    <a href="{base}/characters/echo">Echo</a><br/>
+    <a href="{base}/characters/narcissus">Narcissus</a><br/>
     <a href="{base}/characters/pandora">Pandora</a><br/>
+    <a href="{base}/characters/melody">Melody</a><br/>
+    <a href="{base}/characters/horus">Horus</a><br/>
     <a href="{base}/characters/anubis">Anubis</a><br/>
+    <a href="{base}/characters/kamui">Kamui</a><br/>
+    <a href="{base}/characters/hammurabi">Hammurabi</a><br/>
 </nav>
 
 <style>

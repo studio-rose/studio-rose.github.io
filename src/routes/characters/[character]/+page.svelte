@@ -1,7 +1,7 @@
 <script>
     import RadarChart from "$lib/RadarChart.svelte";
     import CharacterInfoBox from "$lib/CharacterInfoBox.svelte";
-    import SvelteMarkdown from 'svelte-markdown';
+    import {marked} from 'marked';
     import GithubSlugger from 'github-slugger'
 
     const slugger = new GithubSlugger();
@@ -9,20 +9,43 @@
     $: ({attributes, moniker, name, primary_color, secondary_color} = data.character);
 
     let headers = [];
-    function on_markdown_parsed(event) {
-        let headings = event.detail.tokens.filter(h => h.type === "heading");
-        let new_headers = [];
 
-        for (const h of headings) {
-            if (h.depth === 2) {
-                h.children = [];
-                new_headers.push(h);
-            }else if(h.depth === 4){
-                new_headers.slice(-1)[0].children.push(h);
+    const walkTokens = (token) => {
+        if(token.type === "heading") {
+            let header_info = {
+                text: token.text,
+                depth: token.depth,
+                children: []
+            }
+            if (header_info.depth === 2) {
+                headers.push(header_info);
+            } else if (token.depth === 4) {
+                headers.at(-1).children.push(header_info)
             }
         }
-        headers = new_headers;
+        headers = headers;
+    };
+
+    let renderer = new marked.Renderer();
+    renderer.heading = function(text, level, raw) {
+        let anchor = normalize_id(raw);
+        return '<h' + level + ' id="' + anchor + '">' + text + '</h' + level + '>\n';
+    };
+
+    function postprocess(html) {
+        headers = headers;
+        slugger.reset();
+        return html;
     }
+
+    function preprocess(markdown) {
+        headers = [];
+        slugger.reset();
+        return markdown;
+    }
+
+    marked.setOptions({renderer: renderer});
+    marked.use({ walkTokens, async:false, hooks: { preprocess, postprocess }  });
 
     function normalize_id(str) {
         return slugger.slug(str);
@@ -33,7 +56,7 @@
 
 <div class="character-page">
 
-    <div class="character-content">
+    <div class="character-markdown">
 
         <!-- Name, Moniker -->
         <div class="character-name">
@@ -64,20 +87,22 @@
             </ul>
         </div>
 
-        <div style:float="right">
-            <CharacterInfoBox attribute_data={attributes}
-                              primary_color={primary_color}
-                              secondary_color={secondary_color}
-                              character={data.character} />
-        </div>
-
-
         {#await import(`$lib/character_markdown/${data.character.markdown_path}.md?raw`) then {default: source}}
-            <SvelteMarkdown {source} on:parsed={on_markdown_parsed}/>
+            {@html marked(source)}
+            <!-- <SvelteMarkdown {source} on:parsed={on_markdown_parsed}/> -->
             <br/>
         {/await}
 
     </div>
+
+
+    <div class="character-info">
+        <CharacterInfoBox attribute_data={attributes}
+                          primary_color={primary_color}
+                          secondary_color={secondary_color}
+                          character={data.character} />
+    </div>
+
 
 </div>
 
@@ -95,12 +120,22 @@
 
 
 <style>
-    .character-content {
-        margin: auto;
+    .character-page {
+        display:flex;
+        margin: 8px;
+        flex-basis:100%;
+    }
+
+    .character-markdown {
         padding: 8px;
-        width:70%;
+        width:60%;
         border: 1px solid white;
         overflow:auto;
+    }
+
+    .character-info {
+        margin-right:auto;
+        margin-left:auto;
     }
 
     .table-of-contents {
@@ -108,6 +143,8 @@
         padding: 8px;
         display: inline-block;
         background-color:#1a1a20;
+        float:left;
+        margin: 16px;
     }
 
     .table-of-contents a {
@@ -115,12 +152,7 @@
         text-decoration: none;
     }
 
-
-    .character-page {
-        flex-grow: 1;
-    }
-
-    .character-name{
+    .character-name {
         display:flex;
         align-items: center;
         flex-direction: column;

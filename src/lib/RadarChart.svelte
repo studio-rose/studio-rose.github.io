@@ -34,6 +34,12 @@
                 ticks: {
                     stepSize: 1,
                     display: false
+                },
+                grid: {
+                    color: "#ffffffff"
+                },
+                pointLabels: {
+                    color: 'white'
                 }
             },
         },
@@ -51,16 +57,15 @@
     };
 
     $: (radar_data = {
-        labels: [
-            'STR', 'AGI', 'DEX', 'INT', 'WIS', 'ARC',
-        ],
+        labels: attribute_data.keys,
         datasets: [
             {
                 lineWidth: 4.0,
                 backgroundColor: primary_color,
-                borderColor: secondary_color,
+                borderColor: "#ffffffff",
                 pointBackgroundColor: secondary_color,
-                data: attribute_data,
+                data: attribute_data.values,
+
             }
         ],
     });

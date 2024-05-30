@@ -2,12 +2,22 @@
   "name": "Anubis",
   "moniker": "Judgement",
   "tarot": 20,
-  "age": "N/A",
-  "height": "N/A",
-  "weight": "N/A",
-  "birthday": "N/A",
-  "attributes": [5, 5, 5, 5, 5, 5],
 
-  "markdown_path": "anubis"
+  "markdown_path": "anubis",
+  
+  "characteristics": {
+  },
+  "trivia": {
+  },
+  "arcana": {
+  },
+  "attributes": {
+    "STR": 4,
+    "AGI": 4,
+    "INT": 4,
+    "WIS": 4,
+    "MAG": 4,
+    "CON": 4
+  }
 
 }
