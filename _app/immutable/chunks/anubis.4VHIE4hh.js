@@ -1,0 +1,1 @@
+const t="Anubis",a="Judgement",i=20,n="anubis",s={},r={},c={},o={STR:4,AGI:4,INT:4,WIS:4,MAG:4,CON:4},e={name:t,moniker:a,tarot:20,markdown_path:n,characteristics:s,trivia:r,arcana:c,attributes:o};export{c as arcana,o as attributes,s as characteristics,e as default,n as markdown_path,a as moniker,t as name,i as tarot,r as trivia};
