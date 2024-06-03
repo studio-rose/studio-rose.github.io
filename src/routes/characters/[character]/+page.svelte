@@ -1,12 +1,12 @@
 <script>
-    import RadarChart from "$lib/RadarChart.svelte";
     import CharacterInfoBox from "$lib/CharacterInfoBox.svelte";
     import {marked} from 'marked';
     import GithubSlugger from 'github-slugger'
 
+
     const slugger = new GithubSlugger();
     export let data;
-    $: ({attributes, moniker, name, primary_color, secondary_color} = data.character);
+    $: ({name, arcana, primary_color, secondary_color} = data.character);
 
     let headers = [];
 
@@ -60,9 +60,9 @@
 
         <!-- Name, Moniker -->
         <div class="character-name">
-            <h3>{name}</h3>
+            <h2>{name}</h2>
             <hr style="--bar-color: {secondary_color}"/>
-            <span>{moniker}</span>
+            <span>{arcana.tarot}</span>
             <br/>
         </div>
 
@@ -97,8 +97,7 @@
 
 
     <div class="character-info">
-        <CharacterInfoBox attribute_data={attributes}
-                          primary_color={primary_color}
+        <CharacterInfoBox primary_color={primary_color}
                           secondary_color={secondary_color}
                           character={data.character} />
     </div>
@@ -131,6 +130,7 @@
         width:60%;
         border: 1px solid white;
         overflow:auto;
+        background-color:black;
     }
 
     .character-info {
@@ -158,7 +158,7 @@
         flex-direction: column;
     }
 
-    .character-name h3{
+    .character-name h2 {
         padding: 0px;
         margin: 0px;
     }
@@ -166,9 +166,31 @@
     .character-name hr {
         width: 50%;
         border:none;
+        margin:4px;
 
         border-bottom: 1px solid var(--bar-color);
         box-shadow: 0 0 4px 0 var(--bar-color);
+    }
+
+    ul {
+        list-style-type: "\2B17";
+    }
+    li::marker{
+        color: white;
+        padding: 0;
+        transition: .3s;
+    }
+    li:hover::marker {
+        color:pink;
+    }
+
+    li > a {
+        padding-left: 0;
+        transition: .4s;
+    }
+
+    li:hover > a {
+        padding-left: 8px;
     }
 
 </style>

@@ -1,10 +1,11 @@
 <script>
     import RadarChart from "$lib/RadarChart.svelte";
 
-    export let attribute_data;
     export let primary_color;
     export let secondary_color;
     export let character;
+
+    let attribute_data;
 
     $: ({characteristics={}, trivia={}, arcana={}, attributes={}} = character);
     $: (attribute_data = {
@@ -82,6 +83,7 @@
     .content {
         width: 200px;
         border: 2px solid #ffccdd;
+        background-color: black;
     }
 
     .radar {
