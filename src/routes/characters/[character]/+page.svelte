@@ -2,11 +2,13 @@
     import CharacterInfoBox from "$lib/CharacterInfoBox.svelte";
     import {marked} from 'marked';
     import GithubSlugger from 'github-slugger'
-
+    import { slide } from "svelte/transition";
 
     const slugger = new GithubSlugger();
     export let data;
     $: ({name, arcana, primary_color, secondary_color} = data.character);
+    let toc_expanded = true;
+
 
     let headers = [];
 
@@ -68,26 +70,29 @@
 
         <div class="table-of-contents">
             <span>Table of Contents</span>
+            <button style="float:right; margin-left:100px" on:click={()=>{toc_expanded = !toc_expanded}}>V</button>
             <br />
-            <ul>
-                {#each headers as heading}
-                    <li>
-                        <a href="#{normalize_id(heading.text)}">{heading.text}</a>
-                    </li>
-                    {#if heading.children.length }
-                        <ul>
-                            {#each heading.children as child_heading}
-                                <li>
-                                    <a href="#{normalize_id(child_heading.text)}">{child_heading.text}</a>
-                                </li>
-                            {/each}
-                        </ul>
-                    {/if}
-                {/each}
-            </ul>
+            {#if toc_expanded}
+                <ul transition:slide={{ duration: 300 }}>
+                    {#each headers as heading}
+                        <li>
+                            <a href="#{normalize_id(heading.text)}">{heading.text}</a>
+                        </li>
+                        {#if heading.children.length }
+                            <ul>
+                                {#each heading.children as child_heading}
+                                    <li>
+                                        <a href="#{normalize_id(child_heading.text)}">{child_heading.text}</a>
+                                    </li>
+                                {/each}
+                            </ul>
+                        {/if}
+                    {/each}
+                </ul>
+            {/if}
         </div>
 
-        {#await import(`$lib/character_markdown/${data.character.markdown_path}.md?raw`) then {default: source}}
+        {#await import(`$lib/character_markdown/${data.character.id}.md?raw`) then {default: source}}
             {@html marked(source)}
             <!-- <SvelteMarkdown {source} on:parsed={on_markdown_parsed}/> -->
             <br/>

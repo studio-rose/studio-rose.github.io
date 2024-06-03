@@ -1,9 +1,8 @@
 {
   "name": "Melody",
-  "primary_color": "#FFCCCC22",
-  "secondary_color": "#DE9194ff",
-  "sprite_path": "melody",
-  "markdown_path": "melody",
+  "id": "melody",
+  "primary_color": "#FFCCCCff",
+  "secondary_color": "#F2ADB0FF",
   
   "characteristics": {
     "age": "XX",
