@@ -1,8 +1,8 @@
 {
   "name": "Melody",
   "id": "melody",
-  "primary_color": "#FFCCCCff",
-  "secondary_color": "#F2ADB0FF",
+  "primary_color": "hotpink",
+  "secondary_color": "hotpink",
   
   "characteristics": {
     "age": "XX",

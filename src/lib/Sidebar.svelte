@@ -2,6 +2,18 @@
     import { base } from "$app/paths";
     import {slide, fade} from 'svelte/transition';
     let display_sidebar = false;
+
+    let character_links = [
+        {link:"silver", name:"Silver"},
+        {link:"echo", name:"Echo"},
+        {link:"narcissus", name:"Narcissus"},
+        {link:"pandora", name:"Pandora"},
+        {link:"melody", name:"Melody"},
+        {link:"horus", name:"Horus"},
+        {link:"anubis", name:"Anubis"},
+        {link:"kamui", name:"Kamui"},
+        {link:"hammurabi", name:"Hammurabi"},
+    ]
 </script>
 
 
@@ -12,17 +24,31 @@
 
     </button>
     <nav transition:slide={{delay: 0, duration: 400, axis: 'x'}}>
-        <u>Navigation</u>
-        <br/>
-        <a href="{base}/characters/silver">Silver</a><br/>
-        <a href="{base}/characters/echo">Echo</a><br/>
-        <a href="{base}/characters/narcissus">Narcissus</a><br/>
-        <a href="{base}/characters/pandora">Pandora</a><br/>
-        <a href="{base}/characters/melody">Melody</a><br/>
-        <a href="{base}/characters/horus">Horus</a><br/>
-        <a href="{base}/characters/anubis">Anubis</a><br/>
-        <a href="{base}/characters/kamui">Kamui</a><br/>
-        <a href="{base}/characters/hammurabi">Hammurabi</a><br/>
+        <u>Characters</u><br/>
+        <ul>
+        {#each character_links as link}
+            <li><a href="{base}/characters/{link.link}">{link.name}</a></li>
+        {/each}
+        </ul>
+
+        <u>Events</u><br/>
+        <ul>
+            The Shattering of True Dagon <br/>
+            The Fall of the Arcana <br/>
+            The Emperor's Penance <br/>
+            1000 Years of Silence <br/>
+            The Awakening <br/>
+
+            Grotto of the Moon <br/>
+            Wrath of the Devil <br/>
+            The False Magician <br/>
+            The Four Towers <br/>
+            Judgement <br/>
+
+            Back to the Beginning <br/>
+            Eight v. Dagon <br/>
+
+        </ul>
     </nav>
 {/if}
     <input type="checkbox" bind:checked={display_sidebar} style="position:fixed; top:0px"/>
@@ -37,6 +63,12 @@
         position:fixed;
         top:0;
         height:100vh;
+        border-right: 4px solid #222222;
+    }
+
+    ul {
+        margin:0;
+        padding-left:16px;
     }
 
     a {

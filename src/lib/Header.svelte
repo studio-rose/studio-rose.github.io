@@ -1,5 +1,6 @@
 <script>
     import logo from '$lib/icons/icon.svg'
+    import icon_menu from '$lib/icons/menu.svg'
     import icon_email from '$lib/icons/email.svg'
     import icon_reddit from '$lib/icons/reddit.svg'
     import icon_twitter from '$lib/icons/twitter.svg'
@@ -7,7 +8,8 @@
 
 <header class>
     <div class="content">
-        <img src={logo} alt="logo"/>
+        <img class="menu-icon" src={icon_menu} alt="menu"/>
+        <img class="logo" src={logo} alt="logo"/>
         <span>Team Eos and Astraeus</span>
 
         <img src={icon_email} alt="email" class="icon right-align"/>
@@ -25,31 +27,27 @@
     .content {
         width:100%;
         background-color: var(--main-color-3);
+        position:relative;
     }
 
-    img {
-        padding: 4px;
-        image-rendering: pixelated;
+    .menu-icon {
+        height: 64px;
+        padding-right: 64px;
     }
+
 
     span {
         font-weight: bold;
         font-size: 1.5em;
-        text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
     }
 
     header {
         border-top: 2px solid grey;
+        /*position:fixed;*/
+        top:0;
+        left:0;
+        right:0;
     }
-    /*
-    header::after {
-        content: "";
-        background: linear-gradient(var(--main-color-3), #000000aa);
-        width: 100%;
-        height: 4px;
-        position: absolute;
-    }
-     */
 
     .right-align {
         margin-left: auto;
