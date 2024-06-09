@@ -1,22 +1,12 @@
 <script>
     import {base} from "$app/paths";
+    import Hexagon from "$lib/Hexagon.svelte";
 
 
-    function generate_hexagon(height, center){
-        let ret = "";
-        let pi_over_3 = Math.PI / 3;
-        for(let i = 0; i < 6; i++){
-            let angle = i * pi_over_3;
-            let x_coordinate = center[0] + Math.sin(angle) * height;
-            let y_coordinate = center[1] + Math.cos(angle) * height;
-            ret += x_coordinate.toFixed(2) + " " + y_coordinate.toFixed(2) + " ";
-        }
-        return ret;
-    }
 
 </script>
 
-<h2>Arcana</h2>
+<!--h2>Arcana</h2>
 <div>
     <a href="{base}/characters/silver">Silver</a><br/>
     <a href="{base}/characters/echo">Echo</a><br/>
@@ -27,45 +17,71 @@
     <a href="{base}/characters/anubis">Anubis</a><br/>
     <a href="{base}/characters/kamui">Kamui</a><br/>
     <a href="{base}/characters/hammurabi">Hammurabi</a><br/>
+</div -->
+
+
+
+
+<div class="container">
+    <style>
+        .hexagon-holder {
+            display:flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            border:1px solid white;
+            width: 40%;
+            margin: 8px;
+            aspect-ratio: 1;
+        }
+        .hexagon-row {
+            border:0px solid red;
+            display: flex;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 100%;
+            height: 30%;
+            margin: 8px 0px;
+        }
+        .hexagon {
+            border:0px solid blue;
+            width:30%;
+            aspect-ratio: 1;
+            flex-shrink: 0;
+            margin: 0px 8px;
+        }
+        .hex {
+            padding:0%;
+        }
+        .centered {
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+    <div class="hexagon-holder">
+        <div class="hexagon-row">
+            <div class="hexagon"><div class="hex"><Hexagon label="Overview"/></div></div>
+            <div class="hexagon"><div class="hex"><Hexagon label="Abilities"/></div></div>
+        </div>
+        <div class="hexagon-row">
+            <div class="hexagon"><div class="hex"><Hexagon label="History"/></div></div>
+            <div class="hexagon" style="display:flex">
+                <div class="centered">
+                    <span>Melody</span>
+                    <hr/>
+                    The Magician</div>
+            </div>
+            <div class="hexagon"><div class="hex"><Hexagon label="Gallery"/></div></div>
+        </div>
+        <div class="hexagon-row">
+            <div class="hexagon"><div class="hex"><Hexagon label="Trivia"/></div></div>
+            <div class="hexagon"><div class="hex"><Hexagon label="Attributes"/></div></div>
+        </div>
+    </div>
 </div>
 
-<svg width="87" height="100" viewbox="0 0 87 100">
-    <polygon fill="currentColor" points={generate_hexagon(50, [44, 50])}></polygon>
-    <polygon class="test-path" fill="#000" points={generate_hexagon(45, [44, 50])}></polygon>
-    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">Attributes</text>
-</svg>
 
 
-<hr/>
 
-<style>
-    svg {
-        height:100px;
-        width:100px;
-        filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
-    }
-    svg polygon {
-        transition: 1.0s;
-        color: #aaaaaaff;
-        transform-origin: 50% 50%;
-    }
-    svg:hover polygon {
-        transform: rotate(180deg);
-        color: #0004;
-    }
-
-    .test-path{
-        fill:#fcd;
-        scale: 0;
-    }
-
-    svg:hover .test-path {
-        fill:#fcd;
-        scale: 100%;
-    }
-
-
-</style>
 
 <!--
 <h2>Relics</h2>
