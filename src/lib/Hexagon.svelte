@@ -30,7 +30,13 @@
     }
 
     text {
+        transition: 1.0s;
         fill: black;
+        font-weight: bold;
+    }
+
+    svg:hover text {
+        fill: white;
     }
 
     .outer-hexagon {
@@ -41,20 +47,21 @@
 
     .inner-hexagon {
         transition: 1.0s;
-        fill:#fcdf;
+        fill:darkgray;
         transform-origin: 50% 50%;
         scale: 1;
     }
 
     svg:hover .outer-hexagon {
         transform: rotate(180deg);
+        fill:darkgray;
     }
 
     svg:hover .inner-hexagon {
         transform: rotate(180deg);
-        fill:cornflowerblue;
+        fill:#1a1a20;
         scale: 1;
-    }
 
+    }
 
 </style>

@@ -4,11 +4,15 @@
     import icon_email from '$lib/icons/email.svg'
     import icon_reddit from '$lib/icons/reddit.svg'
     import icon_twitter from '$lib/icons/twitter.svg'
+    import { display_sidebar } from '$lib/stores.js';
 </script>
 
 <header class>
     <div class="content">
-        <img class="menu-icon" src={icon_menu} alt="menu"/>
+        <button on:click={()=>{display_sidebar.set(true)}}>
+            <img class="menu-icon" src={icon_menu} alt="menu"/>
+        </button>
+
         <img class="logo" src={logo} alt="logo"/>
         <span>Team Eos and Astraeus</span>
 
@@ -55,5 +59,9 @@
 
     .icon {
         height:16px;
+    }
+
+    button {
+        all: unset;
     }
 </style>

@@ -1,112 +1,42 @@
 <script>
-    import CharacterInfoBox from "$lib/CharacterInfoBox.svelte";
-    import {marked} from 'marked';
-    import GithubSlugger from 'github-slugger'
-    import { slide } from "svelte/transition";
+    import CharacterInfoBox from "$lib/character_components/CharacterInfoBox.svelte";
+    import Overview from "$lib/character_components/Overview.svelte";
+    import Gallery from "$lib/character_components/Gallery.svelte";
 
-    const slugger = new GithubSlugger();
     export let data;
     $: ({name, arcana, primary_color, secondary_color} = data.character);
-    let toc_expanded = true;
 
-
-    let headers = [];
-
-    const walkTokens = (token) => {
-        if(token.type === "heading") {
-            let header_info = {
-                text: token.text,
-                depth: token.depth,
-                children: []
-            }
-            if (header_info.depth === 2) {
-                headers.push(header_info);
-            } else if (token.depth === 4) {
-                headers.at(-1).children.push(header_info)
-            }
-        }
-        headers = headers;
-    };
-
-    let renderer = new marked.Renderer();
-    renderer.heading = function(text, level, raw) {
-        let anchor = normalize_id(raw);
-        return '<h' + level + ' id="' + anchor + '">' + text + '</h' + level + '>\n';
-    };
-
-    function postprocess(html) {
-        headers = headers;
-        slugger.reset();
-        return html;
-    }
-
-    function preprocess(markdown) {
-        headers = [];
-        slugger.reset();
-        return markdown;
-    }
-
-    marked.setOptions({renderer: renderer});
-    marked.use({ walkTokens, async:false, hooks: { preprocess, postprocess }  });
-
-    function normalize_id(str) {
-        return slugger.slug(str);
-    }
+    let displayed_tab = "Overview";
 
 </script>
 
 
 <div class="character-page">
 
-    <div class="character-markdown">
+    <!-- Name, Moniker -->
+    <div class="character-name">
+        <h2>{name}</h2>
+        <hr style="--bar-color: {secondary_color}"/>
+        <span>{arcana.tarot}</span>
+        <br/>
+    </div>
 
-        <!-- Name, Moniker -->
-        <div class="character-name">
-            <h2>{name}</h2>
-            <hr style="--bar-color: {secondary_color}"/>
-            <span>{arcana.tarot}</span>
-            <br/>
+    <div class="character-content">
+        <div class="tabs">
+            {#each ["Overview", "Trivia", "Gallery"] as tab}
+                <button class:highlighted={displayed_tab===tab} on:click={()=>{displayed_tab=tab;}}>{tab}</button>
+            {/each}
         </div>
 
-        <div class="table-of-contents">
-            <span>Table of Contents</span>
-            <button style="float:right; margin-left:100px" on:click={()=>{toc_expanded = !toc_expanded}}>V</button>
-            <br />
-            {#if toc_expanded}
-                <ul transition:slide={{ duration: 300 }}>
-                    {#each headers as heading}
-                        <li>
-                            <a href="#{normalize_id(heading.text)}">{heading.text}</a>
-                        </li>
-                        {#if heading.children.length }
-                            <ul>
-                                {#each heading.children as child_heading}
-                                    <li>
-                                        <a href="#{normalize_id(child_heading.text)}">{child_heading.text}</a>
-                                    </li>
-                                {/each}
-                            </ul>
-                        {/if}
-                    {/each}
-                </ul>
+        <div class="content">
+            {#if displayed_tab === "Overview"}
+                <Overview markdown_path={data.character.id} />
+            {:else if displayed_tab === "Trivia"}
+                <CharacterInfoBox primary_color={primary_color} secondary_color={secondary_color} character={data.character}/>
             {/if}
         </div>
 
-        {#await import(`$lib/character_markdown/${data.character.id}.md?raw`) then {default: source}}
-            {@html marked(source)}
-            <!-- <SvelteMarkdown {source} on:parsed={on_markdown_parsed}/> -->
-            <br/>
-        {/await}
-
     </div>
-
-
-    <div class="character-info">
-        <CharacterInfoBox primary_color={primary_color}
-                          secondary_color={secondary_color}
-                          character={data.character} />
-    </div>
-
 
 </div>
 
@@ -126,35 +56,17 @@
 <style>
     .character-page {
         display:flex;
+        flex-direction: column;
         margin: 8px;
         flex-basis:100%;
     }
 
-    .character-markdown {
-        padding: 8px;
-        width:60%;
-        border: 1px solid white;
+    .character-content {
+        width:95%;
+        border: 2px solid #fff;
+        margin:auto;
         overflow:auto;
-        background-color:black;
-    }
-
-    .character-info {
-        margin-right:auto;
-        margin-left:auto;
-    }
-
-    .table-of-contents {
-        border: 1px solid white;
-        padding: 8px;
-        display: inline-block;
-        background-color:#1a1a20;
-        float:left;
-        margin: 16px;
-    }
-
-    .table-of-contents a {
-        color:white;
-        text-decoration: none;
+        background-color:#111;
     }
 
     .character-name {
@@ -177,25 +89,44 @@
         box-shadow: 0 0 4px 0 var(--bar-color);
     }
 
-    ul {
-        list-style-type: "\2B17";
+    :global(p)  {
+        color: #dddddd;
+        line-height: 1.5rem;
     }
-    li::marker{
+
+    button {
+        padding: 8px;
+        margin: 0;
+        min-width:80px;
+        min-height: 50px;
+        font-size: 1.2em;
         color: white;
-        padding: 0;
-        transition: .3s;
-    }
-    li:hover::marker {
-        color:pink;
-    }
-
-    li > a {
-        padding-left: 0;
-        transition: .4s;
+        text-align: center;
+        display:inline-block;
+        background-color: #1a1a20;
+        border:none;
     }
 
-    li:hover > a {
-        padding-left: 8px;
+    .highlighted {
+        border-bottom: 4px solid white;
+    }
+
+    button:hover {
+        background-color: #2a2a40;;
+    }
+
+    .tabs {
+        width:100%;
+        margin:0;
+        padding:0;
+        display:flex;
+    }
+
+    .content {
+        margin: 8px;
+        padding:4px;
+        border: 2px solid #fff;
+        overflow:auto;
     }
 
 </style>
