@@ -1,17 +1,26 @@
 <script>
     import RadarChart from "$lib/character_components/RadarChart.svelte";
 
-    export let primary_color;
-    export let secondary_color;
     export let character;
 
     let attribute_data;
+    let forms;
+    let form_description;
+    let selected_form = "Base Form";
+
+    let primary_color = "#ffffff";
+
+    const traits = ["Strength", "Agility", "Intelligence", "Talisman", "Magic", "Constitution"]
 
     $: ({characteristics={}, trivia={}, arcana={}, attributes={}} = character);
+    $: (forms = Object.keys(attributes));
+    $: (form_description = attributes[selected_form]["Description"]);
     $: (attribute_data = {
-        "keys": Object.keys(attributes),
-        "values": Object.values(attributes)
-    })
+        "keys": traits,
+        "values": traits.map(k => attributes[selected_form][k]),
+    });
+    $: (primary_color = character.primary_color + "88");
+
 </script>
 
 
@@ -74,10 +83,18 @@
     </div>
 
     <div class="stats-charts">
+        <div class="form-selection">
+            {#each forms as form}
+                <button on:click={()=>{selected_form = form}}>{form}</button>
+            {/each}
+        </div>
         <div class="radar">
-            <RadarChart attribute_data={attribute_data}
-                        primary_color={primary_color}
-                        secondary_color={secondary_color} />
+            <div class="radar-container">
+                <h2 class="form-title">{selected_form}</h2>
+                <RadarChart attribute_data={attribute_data} primary_color={primary_color}/>
+                <div class="description">{form_description}</div>
+            </div>
+
         </div>
     </div>
 </div>
@@ -100,14 +117,6 @@
         padding:8px;
     }
 
-    .stats-charts{
-        margin:auto;
-    }
-
-    span {
-
-    }
-
     hr {
         padding: 0px;
     }
@@ -124,4 +133,36 @@
     .right{
         float:right;
     }
+
+    .radar-container{
+        width:60%;
+        margin:auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .description {
+        width:100%;
+    }
+    .form-title {
+        text-align: center;
+    }
+    .form-selection{
+        width:100%;
+        margin-top: 0;
+        height: 40px;
+        display:flex;
+        justify-content: center;
+    }
+
+    button {
+        padding: 8px;
+        margin: 0;
+        font-size: 1.2em;
+        color: white;
+        text-align: center;
+        display:inline-block;
+        background-color: #1a1a20;
+        border:2px solid white;
+    }
+
 </style>

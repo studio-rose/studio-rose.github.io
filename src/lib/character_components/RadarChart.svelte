@@ -23,7 +23,6 @@
     );
     export let attribute_data;
     export let primary_color;
-    export let secondary_color;
 
     let radar_data = {};
 
@@ -65,7 +64,7 @@
                 lineWidth: 4.0,
                 backgroundColor: primary_color,
                 borderColor: "#ffffffff",
-                pointBackgroundColor: secondary_color,
+                pointBackgroundColor: primary_color,
                 data: attribute_data.values,
 
             }
@@ -74,17 +73,5 @@
 
 </script>
 
-<div class="radar-container">
-    <Radar data={radar_data} options={options} />
-    <div class="description">Base Form: Melody's default state is extremely weak physically, but makes up for the difference in constitution and magic power</div>
-</div>
+<Radar data={radar_data} options={options} />
 
-<style>
-    .radar-container{
-        width:60%;
-        margin:auto;
-    }
-    .description {
-        width:100%;
-    }
-</style>

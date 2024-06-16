@@ -1,5 +1,5 @@
 <script>
-    import CharacterInfoBox from "$lib/character_components/CharacterInfoBox.svelte";
+    import CharacterInfoBox from "$lib/character_components/CharacterInfoView.svelte";
     import Overview from "$lib/character_components/Overview.svelte";
     import Gallery from "$lib/character_components/Gallery.svelte";
 
@@ -23,17 +23,19 @@
 
     <div class="character-content">
         <div class="tabs">
-            {#each ["Overview", "Trivia", "Gallery"] as tab}
-                <button class:highlighted={displayed_tab===tab} on:click={()=>{displayed_tab=tab;}}>{tab}</button>
+            {#each ["Overview", "Trivia", "Gallery"] as tab (tab)}
+                <a class:highlighted={displayed_tab===tab} on:click={()=>{displayed_tab=tab;}}>{tab}</a>
             {/each}
         </div>
 
         <div class="content">
+
             {#if displayed_tab === "Overview"}
                 <Overview markdown_path={data.character.id} />
             {:else if displayed_tab === "Trivia"}
                 <CharacterInfoBox primary_color={primary_color} secondary_color={secondary_color} character={data.character}/>
             {/if}
+
         </div>
 
     </div>
@@ -94,7 +96,8 @@
         line-height: 1.5rem;
     }
 
-    button {
+    a {
+        all:unset;
         padding: 8px;
         margin: 0;
         min-width:80px;
@@ -111,7 +114,7 @@
         border-bottom: 4px solid white;
     }
 
-    button:hover {
+    a:hover {
         background-color: #2a2a40;;
     }
 

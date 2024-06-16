@@ -1,8 +1,8 @@
 {
   "name": "Melody",
   "id": "melody",
-  "primary_color": "hotpink",
-  "secondary_color": "hotpink",
+  "primary_color": "#ffffff",
+  "secondary_color": "ffffff",
   
   "characteristics": {
     "age": "XX",
@@ -25,11 +25,32 @@
     "relic": "The Book"
   },
   "attributes": {
-    "STR": 1,
-    "AGI": 1,
-    "INT": 5,
-    "WIS": 2,
-    "MAG": 5,
-    "CON": 4
+    "Base Form" : {
+      "Description": "Melody's default state is extremely weak physically, but makes up for the difference in constitution and magic power",
+      "Strength": 1,
+      "Agility": 1,
+      "Intelligence": 5,
+      "Talisman": 5,
+      "Magic": 5,
+      "Constitution": 3
+    },
+    "Prime Form" : {
+      "Description": "Melody's form before the Fall. Physically stronger than her base form, and with a higher constitution.",
+      "Strength": 3,
+      "Agility": 4,
+      "Intelligence": 5,
+      "Talisman": 5,
+      "Magic": 5,
+      "Constitution": 5
+    },
+    "Akashic Mode" : {
+      "Description": "Activated by closing the Book, this mode is an explosion of magical power, this form temporarily trades constitution for Angelic-level power",
+      "Strength": 4,
+      "Agility": 5,
+      "Intelligence": 5,
+      "Talisman": 5,
+      "Magic": 5,
+      "Constitution": 1
+    }
   }
 }
