@@ -3,7 +3,10 @@
     import TableOfContents from "$lib/character_components/TableOfContents.svelte";
     import {slug} from "github-slugger";
 
-    export let markdown_path;
+    export let data;
+    let markdown_path;
+    $: (markdown_path = data.character.id);
+
 
     let headers = [];
 

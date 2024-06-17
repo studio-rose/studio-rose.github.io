@@ -21,8 +21,9 @@
         LineElement,
         Filler
     );
-    export let attribute_data;
     export let primary_color;
+    export let traits = [];
+    export let values = [];
 
     let radar_data = {};
 
@@ -58,14 +59,14 @@
     };
 
     $: (radar_data = {
-        labels: attribute_data.keys,
+        labels: traits,
         datasets: [
             {
                 lineWidth: 4.0,
                 backgroundColor: primary_color,
                 borderColor: "#ffffffff",
                 pointBackgroundColor: primary_color,
-                data: attribute_data.values,
+                data: values,
 
             }
         ],

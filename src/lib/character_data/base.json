@@ -1,24 +1,30 @@
 {
-    "name": "Name",
-    "moniker": "Moniker",
-    "tarot": -1,
-    "primary_color": "#888888",
-    "secondary_color": "#AAAAAA",
-    
-    "markdown_path": "base",
+    "name": "Base",
+    "id": "base",
+    "primary_color": "#000000",
+    "secondary_color": "#000000",
     
     "characteristics": {
+        "age": "XX",
+        "race": "XX",
+        "gender": "XX",
+        "hair_color": "XX",
+        "eye_color": "XX",
+        "height": "XX",
+        "weight": "XX"
     },
     "trivia": {
+        "birthday": "XX",
+        "song": "XX",
+        "color": "XX"
     },
     "arcana": {
+        "status": "XX",
+        "rank": "XX",
+        "tarot": "XX",
+        "relic": "XX"
     },
     "attributes": {
-        "STR": 4,
-        "AGI": 4,
-        "INT": 4,
-        "WIS": 4,
-        "MAG": 4,
-        "CON": 4
+    
     }
 }

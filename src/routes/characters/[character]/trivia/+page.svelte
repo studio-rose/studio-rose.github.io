@@ -1,39 +1,39 @@
 <script>
     import RadarChart from "$lib/character_components/RadarChart.svelte";
 
-    export let character;
-
-    let attribute_data;
-    let forms;
-    let form_description;
-    let selected_form = "Base Form";
+    export let data;
 
     let primary_color = "#ffffff";
+    let forms = [];
+    let attribute_data = {};
+    let selected_form = null;
+    const traits = ["Strength", "Agility", "Intelligence", "Talisman", "Magic", "Constitution"];
 
-    const traits = ["Strength", "Agility", "Intelligence", "Talisman", "Magic", "Constitution"]
-
-    $: ({characteristics={}, trivia={}, arcana={}, attributes={}} = character);
+    $: ({name, characteristics={}, trivia={}, arcana={}, attributes={}} = data.character);
     $: (forms = Object.keys(attributes));
-    $: (form_description = attributes[selected_form]["Description"]);
-    $: (attribute_data = {
-        "keys": traits,
-        "values": traits.map(k => attributes[selected_form][k]),
-    });
-    $: (primary_color = character.primary_color + "88");
+    $: (attribute_data =
+        Object.fromEntries(Object.entries(attributes).map(([k, v]) => [k, {
+            "values": traits.map(q => v[q]),
+            "description": v["Description"]
+        }]))
+    );
+    $: (primary_color = data.character.primary_color + "88");
+
+    $: selected_form = Object.keys(attribute_data)[0];
 
 </script>
 
 
 <div class="container">
     <div class="trivia-content">
-    <!--
-    {#await import(`$lib/character_images/${character.sprite_path}.png`) then { default: src }}
-        <img {src} alt="Sprite" /><br/>
-    {/await}
-    -->
+        <!--
+        {#await import(`$lib/character_images/${character.sprite_path}.png`) then { default: src }}
+            <img {src} alt="Sprite" /><br/>
+        {/await}
+        -->
         <div class="info-section">
             <div class="centered">
-                <span>&#171;&#171; {character.name} &#187;&#187;</span>
+                <span>&#171;&#171; {name} &#187;&#187;</span>
             </div>
         </div>
 
@@ -90,9 +90,13 @@
         </div>
         <div class="radar">
             <div class="radar-container">
-                <h2 class="form-title">{selected_form}</h2>
-                <RadarChart attribute_data={attribute_data} primary_color={primary_color}/>
-                <div class="description">{form_description}</div>
+                {#if selected_form}
+                    <h2 class="form-title">{selected_form}</h2>
+                    <RadarChart traits={traits}
+                                values={attribute_data[selected_form]["values"]}
+                                primary_color={primary_color}/>
+                    <div class="description">{attribute_data[selected_form]["description"]}</div>
+                {/if}
             </div>
 
         </div>
@@ -111,6 +115,7 @@
     .container {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .radar {
@@ -118,7 +123,7 @@
     }
 
     hr {
-        padding: 0px;
+        padding: 0;
     }
 
     .info-section {
