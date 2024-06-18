@@ -4,7 +4,7 @@ an immeasurable amount of mana, that constantly needs to be siphoned off. Melody
 specializing in defense projections. &#x16a0; &#x16A1; &#x16A2; &#x16A3;
 
 ## See Also
-[Anubis](/characters/anubis)
+[Anubis](./characters/anubis)
 
 ## History
 #### Before the Fall

@@ -1,7 +1,7 @@
 <script>
     import {base} from "$app/paths";
     import { page } from '$app/stores';
-    import {fly } from 'svelte/transition';
+    import {fly, fade } from 'svelte/transition';
     import {onMount} from "svelte";
 
     export let data;
@@ -23,10 +23,9 @@
     <div class="character-name">
         {#key test_value}
             <h2 in:fly={{ delay: 0, duration: 1000, x: -100, opacity: 0.0 }}>{name}</h2>
-        {/key}
-        <!-- hr style="--bar-color: {primary_color}"/ -->
-        <span class="notranslate highlighted-runes">{@html runes}</span>
-        {#key test_value}
+            <!-- hr style="--bar-color: {primary_color}"/ -->
+            <div in:fade={{ delay: 200, duration: 800 }} class="notranslate highlighted-runes">{@html runes}</div>
+
             <h3 in:fly={{ delay: 0, duration: 1000, x: 100, opacity: 0.0 }}>{arcana.tarot}</h3>
         {/key}
         <br/>
@@ -35,7 +34,11 @@
     <div class="character-content">
         <div class="tabs">
             {#each ["Overview", "Trivia", "Gallery"] as tab}
-                <a href="{base}/characters/{data.character.id}/{tab.toLowerCase()}" class:highlighted={displayed_tab.toLowerCase()===tab.toLowerCase()}>{tab}</a>
+                <a href="{base}/characters/{data.character.id}/{tab.toLowerCase()}"
+                   class:highlighted={displayed_tab.toLowerCase()===tab.toLowerCase()}
+                   data-sveltekit-noscroll>
+                    {tab}
+                </a>
             {/each}
         </div>
 

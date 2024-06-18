@@ -42,7 +42,7 @@
         <u>Characters</u><br/>
         <ul>
             {#each character_links as link}
-                <li><a href="{base}/characters/{link.link}">{link.name}</a></li>
+                <li><a on:click={()=>{display_sidebar.set(false)}} href="{base}/characters/{link.link}">{link.name}</a></li>
             {/each}
         </ul>
 

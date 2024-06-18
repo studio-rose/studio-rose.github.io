@@ -2,9 +2,6 @@
 Pandora
 
 ## See Also
-[Melody](../characters/melody)
-
-[Anubis](../characters/anubis)
 
 ## History
 #### Before the Fall

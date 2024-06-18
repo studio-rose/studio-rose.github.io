@@ -1,7 +1,11 @@
 <script>
     import {marked} from 'marked';
-    import TableOfContents from "$lib/character_components/TableOfContents.svelte";
+    import {baseUrl} from "marked-base-url";
     import {slug} from "github-slugger";
+    import {base} from "$app/paths";
+    import {page} from "$app/stores";
+
+    import TableOfContents from "$lib/character_components/TableOfContents.svelte";
 
     export let data;
     let markdown_path;
@@ -45,20 +49,20 @@
 
     marked.setOptions({renderer: renderer});
     marked.use({ walkTokens, async:false, hooks: { preprocess, postprocess }  });
+    marked.use(baseUrl($page.url.origin));
 
     function normalize_id(str) {
         return slug(str);
     }
+
 </script>
 
 
 <div class="character-markdown">
     <TableOfContents headers={headers} />
 
-    {#await import(`$lib/character_markdown/${markdown_path}.md?raw`) then {default: source}}
-        {@html marked(source)}
-        <br/>
-    {/await}
+    {@html marked(data.markdown.default)}
+    <br/>
 
 </div>
 
