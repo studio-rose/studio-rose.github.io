@@ -1,2 +1,2 @@
 ## See Also
-[Melody](./melody)
+[Melody](/characters/melody)

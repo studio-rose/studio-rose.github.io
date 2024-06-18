@@ -1,17 +1,16 @@
 <script>
     import {base} from "$app/paths";
+    import { page } from '$app/stores';
+    import {fly} from 'svelte/transition';
 
     export let data;
     $: ({name, arcana, primary_color, secondary_color} = data.character);
-    import { page } from '$app/stores';
 
     let displayed_tab = "Overview";
-    $: (displayed_tab = get_leaf_node());
+    $: (displayed_tab = $page.url.pathname.split("/").pop());
 
-    function get_leaf_node(){
-        const segments = $page.url.pathname.split("/");
-        return segments.pop() || segments.pop();
-    }
+    let runes = Array.from({length: 64}, v => "&#x16" + Math.floor(Math.random() * 5 + 10).toString(16) + Math.floor(Math.random() * 16).toString(16) + ";").join("");
+    console.log(runes);
 
 </script>
 
@@ -21,8 +20,9 @@
     <!-- Name, Moniker -->
     <div class="character-name">
         <h2>{name}</h2>
-        <hr style="--bar-color: {secondary_color}"/>
-        <span>{arcana.tarot}</span>
+        <!-- hr style="--bar-color: {primary_color}"/ -->
+        <span class="highlighted-runes">{@html runes}</span>
+        <h3 in:fly|global={{ intro: true, duration: 300 }}>{arcana.tarot}</h3>
         <br/>
     </div>
 
@@ -74,11 +74,18 @@
         display:flex;
         align-items: center;
         flex-direction: column;
+        margin: 64px;
     }
 
     .character-name h2 {
         padding: 0px;
         margin: 0px;
+        font-size: 3em;
+    }
+    .character-name h3 {
+        padding: 0px;
+        margin: 0px;
+        font-size: 2em;
     }
 
     .character-name hr {
@@ -97,16 +104,15 @@
 
     a {
         all:unset;
-        padding: 8px;
+        padding: 16px;
         margin: 0;
         min-width:80px;
-        min-height: 50px;
         font-size: 1.2em;
         color: white;
         text-align: center;
         display:inline-block;
         background-color: #1a1a20;
-        border:none;
+        border-right:4px solid red;
     }
 
     .highlighted {
@@ -129,6 +135,11 @@
         padding:4px;
         border: 2px solid #fff;
         overflow:auto;
+    }
+
+    .highlighted-runes{
+        color: lightpink;
+        text-shadow: 0 0 4px lightpink;
     }
 
 </style>

@@ -1,9 +1,10 @@
 ## Overview
-Melody is the current Magician of the Arcana, and wielder of the Book relic. Though physically weak, she possesses an immeasurable amount of mana, that constantly needs to be siphoned off. Melody is adept at most forms of magic, specializing in defense projections.
-
+Melody is the current Magician of the Arcana, and wielder of the Book relic. Though physically weak, she possesses 
+an immeasurable amount of mana, that constantly needs to be siphoned off. Melody is adept at most forms of magic, 
+specializing in defense projections. &#x16a0; &#x16A1; &#x16A2; &#x16A3;
 
 ## See Also
-[Anubis](../characters/anubis)
+[Anubis](/characters/anubis)
 
 ## History
 #### Before the Fall

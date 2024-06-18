@@ -1,5 +1,6 @@
 <script>
     import { slide } from "svelte/transition";
+    import expand_arrow from "$lib/icons/expand-arrow.svg";
 
     export let headers;
 
@@ -8,7 +9,9 @@
 
 <div class="table-of-contents">
     <span>Table of Contents</span>
-    <button style="float:right; margin-left:100px" on:click={()=>{toc_expanded = !toc_expanded}}>V</button>
+    <button style="float:right; margin-left:100px" on:click={()=>{toc_expanded = !toc_expanded}}>
+        <img src={expand_arrow} alt="expand-arrow" class:img-flipped={!toc_expanded}/>
+    </button>
     <br />
     {#if toc_expanded}
         <ul transition:slide={{ duration: 300 }}>
@@ -34,7 +37,6 @@
     .table-of-contents {
         border: 1px solid white;
         padding: 8px;
-        display: inline-block;
         background-color:#1a1a20;
         float:left;
         margin: 16px;
@@ -64,5 +66,16 @@
 
     li:hover > a {
         padding-left: 8px;
+    }
+    button {
+        all:unset;
+        width:1.5em;
+    }
+
+    img {
+        transition: .3s;
+    }
+    .img-flipped {
+        transform: rotate(180deg);
     }
 </style>

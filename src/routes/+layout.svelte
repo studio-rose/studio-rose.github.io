@@ -4,17 +4,21 @@
     import Sidebar from "$lib/Sidebar.svelte";
 </script>
 
-<Header />
+<div class="all">
+    <Header />
 
-<div class="sidebar-container">
-    <Sidebar/>
-    <slot />
+    <div class="sidebar-container">
+        <Sidebar/>
+        <slot />
+    </div>
+
+    <Footer />
 </div>
 
-<Footer />
-
-
 <style>
+    .all {
+        background-color: #0c0c1c;
+    }
     .sidebar-container {
         display:flex;
         flex-direction: row;
