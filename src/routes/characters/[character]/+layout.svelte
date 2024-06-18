@@ -140,6 +140,7 @@
     .highlighted-runes{
         color: lightpink;
         text-shadow: 0 0 4px lightpink;
+        white-space: nowrap;
     }
 
 </style>
