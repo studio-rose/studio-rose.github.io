@@ -47,6 +47,7 @@
 
     header {
         border-top: 2px solid grey;
+        border:none;
         /*position:fixed;*/
         top:0;
         left:0;

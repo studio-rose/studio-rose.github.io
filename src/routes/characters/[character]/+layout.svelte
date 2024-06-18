@@ -1,7 +1,8 @@
 <script>
     import {base} from "$app/paths";
     import { page } from '$app/stores';
-    import {fly} from 'svelte/transition';
+    import {fly } from 'svelte/transition';
+    import {onMount} from "svelte";
 
     export let data;
     $: ({name, arcana, primary_color, secondary_color} = data.character);
@@ -10,7 +11,8 @@
     $: (displayed_tab = $page.url.pathname.split("/").pop());
 
     let runes = Array.from({length: 64}, v => "&#x16" + Math.floor(Math.random() * 5 + 10).toString(16) + Math.floor(Math.random() * 16).toString(16) + ";").join("");
-    console.log(runes);
+    let test_value = 0;
+    $: test_value = data.character.id;
 
 </script>
 
@@ -19,10 +21,14 @@
 
     <!-- Name, Moniker -->
     <div class="character-name">
-        <h2>{name}</h2>
+        {#key test_value}
+            <h2 in:fly={{ delay: 0, duration: 1000, x: -100, opacity: 0.0 }}>{name}</h2>
+        {/key}
         <!-- hr style="--bar-color: {primary_color}"/ -->
-        <span class="highlighted-runes">{@html runes}</span>
-        <h3 in:fly|global={{ intro: true, duration: 300 }}>{arcana.tarot}</h3>
+        <span class="notranslate highlighted-runes">{@html runes}</span>
+        {#key test_value}
+            <h3 in:fly={{ delay: 0, duration: 1000, x: 100, opacity: 0.0 }}>{arcana.tarot}</h3>
+        {/key}
         <br/>
     </div>
 
@@ -60,6 +66,9 @@
         flex-direction: column;
         margin: 8px;
         flex-basis:100%;
+        background-image: repeating-linear-gradient(135deg, #fff8, #fff8 200px, #1128 200px, #1128),
+                        repeating-linear-gradient(-160deg, #fff8, #fff8 500px, #1128 500px, #1128);
+        background-image: unset;
     }
 
     .character-content {
