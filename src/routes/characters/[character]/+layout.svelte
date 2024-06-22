@@ -10,7 +10,7 @@
     let displayed_tab = "Overview";
     $: (displayed_tab = $page.url.pathname.split("/").pop());
 
-    let runes = Array.from({length: 64}, v => "&#x16" + Math.floor(Math.random() * 5 + 10).toString(16) + Math.floor(Math.random() * 16).toString(16) + ";").join("");
+    let runes = Array.from({length: 32}, v => "&#x16" + Math.floor(Math.random() * 5 + 10).toString(16) + Math.floor(Math.random() * 16).toString(16) + ";").join("");
     let test_value = 0;
     $: test_value = data.character.id;
 
@@ -33,7 +33,7 @@
 
     <div class="character-content">
         <div class="tabs">
-            {#each ["Overview", "Trivia", "Gallery"] as tab}
+            {#each ["Overview", "History", "Trivia", "Gallery"] as tab}
                 <a href="{base}/characters/{data.character.id}/{tab.toLowerCase()}"
                    class:highlighted={displayed_tab.toLowerCase()===tab.toLowerCase()}
                    data-sveltekit-noscroll>
@@ -107,11 +107,6 @@
 
         border-bottom: 1px solid var(--bar-color);
         box-shadow: 0 0 4px 0 var(--bar-color);
-    }
-
-    :global(p)  {
-        color: #dddddd;
-        line-height: 1.5rem;
     }
 
     a {

@@ -60,9 +60,27 @@
 
 <div class="character-markdown">
     <TableOfContents headers={headers} />
-
     {@html marked(data.markdown.default)}
     <br/>
 
 </div>
+
+<style>
+    .character-markdown :global(p)  {
+        color: #dddddd;
+        line-height: 1.5rem;
+        margin-left: 16px;
+    }
+
+    .character-markdown :global(h2)  {
+        margin-bottom:0;
+        border-bottom: 1px solid white;
+        overflow: hidden;
+    }
+
+    .character-markdown :global(h4)  {
+        margin-bottom:0;
+        font-weight: bold;
+    }
+</style>
 

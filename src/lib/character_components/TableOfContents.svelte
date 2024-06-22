@@ -40,6 +40,7 @@
         background-color:#1a1a20;
         float:left;
         margin: 16px;
+        margin-right: 32px;
     }
 
     .table-of-contents a {

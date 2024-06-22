@@ -110,6 +110,7 @@
         min-width: 200px;
         border: 2px solid #ffccdd;
         background-color: #111;
+        margin:auto;
     }
 
     .container {
@@ -139,9 +140,13 @@
         float:right;
     }
 
+    .stats-charts{
+        margin:0 auto;
+    }
+
     .radar-container{
-        width:60%;
-        margin:auto;
+        width:400px;
+        margin: auto;
         display: flex;
         flex-direction: column;
     }
