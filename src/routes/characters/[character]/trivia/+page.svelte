@@ -107,8 +107,8 @@
 
 <style>
     .trivia-content {
-        min-width: 200px;
-        border: 2px solid #ffccdd;
+        min-width: 300px;
+        border: 4px solid black;
         background-color: #111;
         margin:auto;
     }
@@ -125,11 +125,12 @@
 
     hr {
         padding: 0;
+        border: 2px solid black;
     }
 
     .info-section {
-        margin:4px;
-        padding:4px;
+        margin:8px;
+        padding:8px;
     }
 
     .centered {
@@ -172,7 +173,7 @@
         text-align: center;
         display:inline-block;
         background-color: #1a1a20;
-        border:2px solid white;
+        border:2px solid black;
     }
 
 </style>

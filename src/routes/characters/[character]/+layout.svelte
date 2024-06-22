@@ -76,7 +76,7 @@
 
     .character-content {
         width:95%;
-        border: 2px solid #fff;
+        border: 2px solid #000000;
         margin:auto;
         overflow:auto;
         background-color:#111;
@@ -119,7 +119,7 @@
         text-align: center;
         display:inline-block;
         background-color: #1a1a20;
-        border-right:4px solid red;
+        border-right:4px solid black;
     }
 
     .highlighted {
@@ -140,7 +140,7 @@
     .content {
         margin: 8px;
         padding:4px;
-        border: 2px solid #fff;
+        border: 2px solid #0c0c1c;
         overflow:auto;
     }
 
