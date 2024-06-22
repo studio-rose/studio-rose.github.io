@@ -43,6 +43,10 @@
         6: "S++"
     }
 
+    let data_points = [];
+    $: data_points = values;
+    $: {radar_data.datasets[0].data = values;}
+
     const options = {
         responsive: true,
         scales: {
@@ -83,7 +87,7 @@
         fill:true,
     };
 
-    $: (radar_data = {
+    radar_data = {
         labels: traits,
         datasets: [
             {
@@ -91,11 +95,11 @@
                 backgroundColor: primary_color,
                 borderColor: "#ffffffff",
                 pointBackgroundColor: primary_color,
-                data: values,
+                data: data_points,
 
             }
         ],
-    });
+    };
 
 </script>
 
