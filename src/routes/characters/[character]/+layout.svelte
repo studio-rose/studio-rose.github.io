@@ -69,8 +69,8 @@
         flex-direction: column;
         margin: 8px;
         flex-basis:100%;
-        background-image: repeating-linear-gradient(135deg, #fff8, #fff8 200px, #1128 200px, #1128),
-                        repeating-linear-gradient(-160deg, #fff8, #fff8 500px, #1128 500px, #1128);
+        background-image: repeating-linear-gradient(135deg, #fff8, #fff8 200px, #1118 200px, #1118),
+                        repeating-linear-gradient(-160deg, #fff8, #fff8 500px, #1118 500px, #1118);
         background-image: unset;
     }
 
@@ -140,7 +140,7 @@
     .content {
         margin: 8px;
         padding:4px;
-        border: 2px solid #0c0c1c;
+        border: 2px solid #0c0c0c;
         overflow:auto;
     }
 

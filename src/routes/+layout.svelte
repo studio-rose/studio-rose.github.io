@@ -17,7 +17,7 @@
 
 <style>
     .all {
-        background-color: #0c0c1c;
+        background-color: #0c0c0c;
     }
     .sidebar-container {
         display:flex;

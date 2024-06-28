@@ -1,10 +1,19 @@
 ## Overview
 Melody is the current Magician of the Arcana, and wielder of the Book relic. Though physically weak, she possesses 
 an immeasurable amount of mana, that constantly needs to be siphoned off. Melody is adept at most forms of magic, 
-specializing in defense projections. &#x16a0; &#x16A1; &#x16A2; &#x16A3;
+specializing in defense projections.
 
 ## See Also
-[Anubis](./characters/anubis)
+&#x16a0; [Narcissus](./characters/narcissus)
+
+&#x16A1; [Pandora](./characters/pandora)
+
+&#x16A2; [Melody](./characters/melody)
+
+&#x16A3; [Horus](./characters/horus) 
+
+&#x16A4; [Anubis](./characters/anubis)
+
 
 ## History
 #### Before the Fall
@@ -30,19 +39,24 @@ The battle leaves Hammurabi out cold on the floor with Melody as the decisive vi
 - Build the Starting Village, populate it with illusions
 - Destroy the Nexus, freeing Silver, Echo, and Dagon 
 
-#### Cycle 1
-- Introduced as Echo's little sister. 
-#### Cycle 2
+#### Cycle 1 - Awakening
+Introduced as Echo's little sister. 
+
+#### Cycle 2 - The Time Demon
 Not present
-#### Cycle 3
+
+#### Cycle 3 - Moon Song
 Not present
-#### Cycle 4
-- Takes up arms to fight Pandora during the invasion. Quickly disposed of when attacked with The Weapon
-#### Cycle 5
-- In an attempt to protect Echo from the remaining Arcana, Melody leads the party to Babylon. On the way there, the Book begins to fail. 
-- Unable to control her magic, Melody engages the duo in a battle. In the end, Silver delivers the finishing blow.
-#### Post Mortem
-- Upon starting cycle 6, Echo's false memories begin to disappear, and the Starting Village inhabitants fade away. 
+
+#### Cycle 4 - Underworld Rising
+Takes up arms to fight Pandora during the invasion. Quickly disposed of when attacked with The Weapon
+
+#### Cycle 5 - Magician's Wing
+In an attempt to protect Echo from the remaining Arcana, Melody leads the party to Babylon. On the way there, the Book begins to fail. 
+Unable to control her magic, Melody engages the duo in a battle. In the end, Silver delivers the finishing blow.
+
+#### Post Death
+Upon starting cycle 6, Echo's false memories begin to disappear, and the Starting Village inhabitants fade away. 
 
 ## Abilities
 #### Magical Reserves
@@ -66,5 +80,5 @@ Used at the **Starting Village** to create the villagers. This illusion fades wi
 
 
 ## Notes and Trivia
-- When Echo was awakened, Melody instill a memory of being her sister. In reality, the two do not share any familial ties. 
+- Despite what the narrative would have you believe, Melody and Echo are not related. 
 - Melody possesses the most magic out of any known character, including the Demons. Despite this, she would only fight when it is an absolute necessity. 

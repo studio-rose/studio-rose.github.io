@@ -66,21 +66,39 @@
 </div>
 
 <style>
+    .character-markdown {
+        padding: 32px;
+    }
+
     .character-markdown :global(p)  {
         color: #dddddd;
         line-height: 1.5rem;
-        margin-left: 16px;
     }
 
     .character-markdown :global(h2)  {
         margin-bottom:0;
         border-bottom: 1px solid white;
         overflow: hidden;
+        font-weight: bold;
+        font-size: 1.8rem;
     }
 
     .character-markdown :global(h4)  {
-        margin-bottom:0;
+        margin-bottom: 0;
         font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .character-markdown :global(ul)  {
+        padding-left: 32px;
+        margin: 0px;
+    }
+
+    .character-markdown :global(a:link), :global(a:visited)  {
+        color: white;
+    }
+    .character-markdown :global(a:hover), :global(a:active)  {
+        color: cornflowerblue;
     }
 </style>
 
