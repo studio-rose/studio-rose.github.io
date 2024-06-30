@@ -19,7 +19,7 @@
                 <li>
                     <a href="#{heading.href}">{heading.text}</a>
                 </li>
-                {#if heading.children.length }
+                {#if heading.children && heading.children.length }
                     <ul>
                         {#each heading.children as child_heading}
                             <li>
@@ -38,9 +38,9 @@
         border: 1px solid white;
         padding: 8px;
         background-color:#1a1a20;
-        float:left;
+        float:right;
         margin: 16px;
-        margin-right: 32px;
+        margin-left: 32px;
     }
 
     .table-of-contents a {

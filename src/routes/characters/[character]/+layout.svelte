@@ -100,15 +100,6 @@
         font-size: 2em;
     }
 
-    .character-name hr {
-        width: 50%;
-        border:none;
-        margin:4px;
-
-        border-bottom: 1px solid var(--bar-color);
-        box-shadow: 0 0 4px 0 var(--bar-color);
-    }
-
     a {
         all:unset;
         padding: 16px;
