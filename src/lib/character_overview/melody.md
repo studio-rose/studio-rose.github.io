@@ -4,15 +4,15 @@ an immeasurable amount of mana, that constantly needs to be siphoned off. Melody
 specializing in defense projections.  &#x263D;
 
 ## See Also
-&#x16a0; [Narcissus](./characters/narcissus)
+&#x16a0; [Narcissus](./characters/narcissus) <br/>
+&#x16A1; [Pandora](./characters/pandora) <br/>
+&#x16A2; [Melody](./characters/melody) <br/>
+&#x16A3; [Horus](./characters/horus) <br/>
+&#x16A4; [Anubis](./characters/anubis) <br/>
 
-&#x16A1; [Pandora](./characters/pandora)
 
-&#x16A2; [Melody](./characters/melody)
-
-&#x16A3; [Horus](./characters/horus)
-
-&#x16A4; [Anubis](./characters/anubis)
+## Curse
+The Glyph of Mana Control
 
 
 ## Abilities
