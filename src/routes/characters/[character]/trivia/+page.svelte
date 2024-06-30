@@ -110,7 +110,7 @@
         min-width: 300px;
         border: 4px solid black;
         background-color: #111;
-        margin:auto;
+        margin: 16px auto;
     }
 
     .container {
@@ -135,6 +135,8 @@
 
     .centered {
         text-align: center;
+        font-weight: bold;
+        font-size: 1.2rem;
     }
 
     .right{
@@ -142,7 +144,7 @@
     }
 
     .stats-charts{
-        margin:0 auto;
+        margin: 16px auto;
     }
 
     .radar-container{

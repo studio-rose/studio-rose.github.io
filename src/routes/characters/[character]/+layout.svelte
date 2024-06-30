@@ -86,7 +86,7 @@
         display:flex;
         align-items: center;
         flex-direction: column;
-        margin: 64px;
+        margin: 64px auto;
     }
 
     .character-name h2 {
@@ -102,15 +102,16 @@
 
     a {
         all:unset;
-        padding: 16px;
+        padding: 16px 16px;
         margin: 0;
         min-width:80px;
         font-size: 1.2em;
         color: white;
         text-align: center;
         display:inline-block;
-        background-color: #1a1a20;
-        border-right:4px solid black;
+        border:none;
+        background-color: unset;
+
     }
 
     .highlighted {
@@ -127,10 +128,11 @@
         padding:0;
         display:flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .content {
-        margin: 8px;
+        margin: 0 8px 8px 8px;
         padding:4px;
         border: 2px solid #0c0c0c;
         overflow:auto;
