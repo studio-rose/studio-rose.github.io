@@ -107,7 +107,7 @@
 
 <style>
     .trivia-content {
-        min-width: 300px;
+        min-width: 250px;
         border: 4px solid black;
         background-color: #111;
         margin: 16px auto;
@@ -147,8 +147,8 @@
         margin: 16px auto;
     }
 
-    .radar-container{
-        width:400px;
+    .radar-container {
+        width: calc(min(75vw, 400px));
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -162,9 +162,9 @@
     .form-selection{
         width:100%;
         margin-top: 0;
-        height: 40px;
         display:flex;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     button {
@@ -176,6 +176,7 @@
         display:inline-block;
         background-color: #1a1a20;
         border:2px solid black;
+        height: 40px;
     }
 
 </style>
