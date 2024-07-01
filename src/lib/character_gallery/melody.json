@@ -1,0 +1,14 @@
+{
+    "sprite": {
+        "path": "melody",
+        "description": "Original sprite artwork"
+    },
+    "sprite2": {
+        "path": "sprite_melody",
+        "description": "Original sprite artwork"
+    },
+    "sprite3": {
+        "path": "anubis",
+        "description": "Original sprite artwork"
+    }
+}

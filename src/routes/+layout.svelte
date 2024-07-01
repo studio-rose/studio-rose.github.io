@@ -1,7 +1,7 @@
 <script>
-    import Header from "$lib/Header.svelte";
-    import Footer from "$lib/Footer.svelte";
-    import Sidebar from "$lib/Sidebar.svelte";
+    import Header from "$lib/components/Header.svelte";
+    import Footer from "$lib/components/Footer.svelte";
+    import Sidebar from "$lib/components/Sidebar.svelte";
 </script>
 
 <div class="all">

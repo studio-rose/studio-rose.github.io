@@ -1,6 +1,6 @@
 <script>
     import {base} from "$app/paths";
-    import Hexagon from "$lib/Hexagon.svelte";
+    import Hexagon from "$lib/components/Hexagon.svelte";
 
 
     function generate_hexagon(height, center){

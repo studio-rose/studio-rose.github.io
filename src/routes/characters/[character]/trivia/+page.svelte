@@ -1,5 +1,5 @@
 <script>
-    import RadarChart from "$lib/character_components/RadarChart.svelte";
+    import RadarChart from "$lib/components/RadarChart.svelte";
 
     export let data;
 

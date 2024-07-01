@@ -4,7 +4,7 @@
     import {slug} from "github-slugger";
     import {page} from "$app/stores";
 
-    import TableOfContents from "$lib/character_components/TableOfContents.svelte";
+    import TableOfContents from "$lib/components/TableOfContents.svelte";
 
     export let markdown_data;
 

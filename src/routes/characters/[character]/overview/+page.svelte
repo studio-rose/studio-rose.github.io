@@ -1,5 +1,5 @@
 <script>
-    import SimpleMarkdownLayout from "$lib/character_components/SimpleMarkdownLayout.svelte";
+    import SimpleMarkdownLayout from "$lib/components/SimpleMarkdownLayout.svelte";
 
     export let data;
 </script>
