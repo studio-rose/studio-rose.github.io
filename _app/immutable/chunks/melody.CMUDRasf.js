@@ -10,6 +10,7 @@ specializing in defense projections.  &#x263D;
 &#x16A3; [Horus](./characters/horus) <br/>
 &#x16A4; [Anubis](./characters/anubis) <br/>
 
+![Alt Text](src/lib/character_images/melody.png)
 
 ## Curse
 The Glyph of Mana Control
