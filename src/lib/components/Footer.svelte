@@ -5,13 +5,13 @@
 
 <style>
     div {
-        background-color: var(--main-color-3);
-        padding: 0px;
-        width:100%;
-        height:100%;
+        background-color: var(--footer-color);
+        padding: 4px;
+        width: 100%;
+        height: 100%;
     }
     p {
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
     }
 </style>

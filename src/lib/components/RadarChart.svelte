@@ -95,6 +95,9 @@
                 backgroundColor: primary_color,
                 borderColor: "#ffffffff",
                 pointBackgroundColor: primary_color,
+                pointRadius: 6,
+                pointHitRadius: 6,
+                pointHoverRadius: 8,
                 data: data_points,
 
             }

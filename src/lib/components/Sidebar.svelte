@@ -57,12 +57,12 @@
 
 <style>
     nav {
-        background-color: #444444;
+        background-color: var(--sidebar-color);
         padding: 16px;
         position: fixed;
         top: 0;
         height: 100vh;
-        border-right: 4px solid #222222;
+        border-right: 4px solid var(--sidebar-accent-color);
     }
 
     ul {

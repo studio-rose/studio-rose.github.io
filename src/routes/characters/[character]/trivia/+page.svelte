@@ -17,7 +17,7 @@
             "description": v["Description"]
         }]))
     );
-    $: (primary_color = data.character.primary_color + "88");
+    $: (primary_color = data.character.primary_color + "cc");
 
     $: selected_form = Object.keys(attribute_data)[0];
 
@@ -108,8 +108,8 @@
 <style>
     .trivia-content {
         min-width: 250px;
-        border: 4px solid black;
-        background-color: #111;
+        border: 4px solid var(--trivia-border-color);
+        background-color: var(--trivia-background-color);
         margin: 16px auto;
     }
 
@@ -125,7 +125,7 @@
 
     hr {
         padding: 0;
-        border: 2px solid black;
+        border: 2px solid var(--trivia-accent-color);
     }
 
     .info-section {
@@ -174,8 +174,8 @@
         color: white;
         text-align: center;
         display:inline-block;
-        background-color: #1a1a20;
-        border:2px solid black;
+        background-color: var(--radar-button-color);
+        border:2px solid var(--radar-button-border-color);
         height: 40px;
     }
 

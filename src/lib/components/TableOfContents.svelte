@@ -35,12 +35,11 @@
 
 <style>
     .table-of-contents {
-        border: 1px solid white;
+        border: 1px solid var(--toc-border-color);
         padding: 8px;
-        background-color:#1a1a20;
+        background-color: var(--toc-background-color);
         float:right;
-        margin: 16px;
-        margin-left: 32px;
+        margin: 16px 16px 16px 32px;
     }
 
     .table-of-contents a {
@@ -57,7 +56,7 @@
         transition: .3s;
     }
     li:hover::marker {
-        color:pink;
+        color: var(--toc-marker-color);
     }
 
     li > a {
@@ -70,7 +69,8 @@
     }
     button {
         all:unset;
-        width:1.5em;
+        width:1em;
+        height:1em;
     }
 
     img {

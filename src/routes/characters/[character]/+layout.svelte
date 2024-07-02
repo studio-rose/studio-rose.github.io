@@ -26,7 +26,10 @@
             <!-- hr style="--bar-color: {primary_color}"/ -->
             <div in:fade={{ delay: 200, duration: 800 }} class="notranslate highlighted-runes">{@html runes}</div>
 
-            <h3 in:fly={{ delay: 0, duration: 1000, x: 100, opacity: 0.0 }}>{arcana.tarot}</h3>
+            <h3 in:fly={{ delay: 0, duration: 1000, x: 100, opacity: 0.0 }}
+                style:--moniker-color={primary_color}>
+                {arcana.tarot}
+            </h3>
         {/key}
         <br/>
     </div>
@@ -76,10 +79,10 @@
 
     .character-content {
         width:95%;
-        border: 2px solid #000000;
+        border: 2px solid var(--content-border-color);
         margin:auto;
         overflow:auto;
-        background-color:#111;
+        background-color: var(--base-content-color);
     }
 
     .character-name {
@@ -98,6 +101,7 @@
         padding: 0px;
         margin: 0px;
         font-size: 2em;
+        color: var(--moniker-color);
     }
 
     a {
@@ -110,16 +114,14 @@
         text-align: center;
         display:inline-block;
         border:none;
-        background-color: unset;
-
     }
 
     .highlighted {
-        border-bottom: 4px solid white;
+        border-bottom: 4px solid var(--tab-highlight-color);
     }
 
-    a:hover {
-        background-color: #2a2a40;;
+    .tabs a:hover {
+        background-color: var(--tab-hover-color);
     }
 
     .tabs {
@@ -134,13 +136,13 @@
     .content {
         margin: 0 8px 8px 8px;
         padding:4px;
-        border: 2px solid #0c0c0c;
+        border: 2px solid var(--content-border-color);
         overflow:auto;
     }
 
     .highlighted-runes{
-        color: lightpink;
-        text-shadow: 0 0 4px lightpink;
+        color: white;
+        text-shadow: 0 0 4px black;
         white-space: nowrap;
     }
 

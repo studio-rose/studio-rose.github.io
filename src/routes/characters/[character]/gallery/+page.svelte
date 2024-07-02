@@ -31,5 +31,4 @@
         image-rendering: pixelated;
     }
 
-
 </style>

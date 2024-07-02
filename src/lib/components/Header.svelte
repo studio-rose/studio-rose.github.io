@@ -30,7 +30,7 @@
 
     .content {
         width:100%;
-        background-color: var(--main-color-3);
+        background-color: var(--header-color);
         position:relative;
     }
 
