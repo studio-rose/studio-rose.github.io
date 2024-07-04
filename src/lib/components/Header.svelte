@@ -1,42 +1,49 @@
 <script>
     import logo from '$lib/icons/icon.svg'
-    import icon_menu from '$lib/icons/menu.svg'
+    import Icon_menu from '$lib/icons/menu.svelte'
     import icon_email from '$lib/icons/email.svg'
     import icon_reddit from '$lib/icons/reddit.svg'
     import icon_twitter from '$lib/icons/twitter.svg'
     import { display_sidebar } from '$lib/stores.js';
+
+    let condition = false;
 </script>
 
 <header class>
     <div class="content">
-        <button on:click={()=>{display_sidebar.set(true)}}>
-            <img class="menu-icon" src={icon_menu} alt="menu"/>
+        <button class="super" on:click={()=>{display_sidebar.set(!$display_sidebar);}}>
+            <Icon_menu condition={$display_sidebar} />
         </button>
 
         <img class="logo" src={logo} alt="logo"/>
         <span>Team Eos and Astraeus</span>
 
-        <img src={icon_email} alt="email" class="icon right-align"/>
-        <img src={icon_reddit} alt="reddit" class="icon"/>
-        <img src={icon_twitter} alt="twitter" class="icon"/>
+        <div class="icon right-align">
+            <img src={icon_email} alt="email"/>
+        </div>
+
+        <div class="icon">
+            <img src={icon_reddit} alt="reddit" />
+        </div>
+
+        <div class="icon">
+            <img src={icon_twitter} alt="twitter"/>
+        </div>
     </div>
 </header>
 
 <style>
-    div {
+    .content {
         display: flex;
         align-items: center;
-    }
-
-    .content {
-        width:100%;
+        width: 100%;
+        height: 100%;
         background-color: var(--header-color);
-        position:relative;
+        position: relative;
     }
 
     .menu-icon {
-        height: 64px;
-        padding-right: 64px;
+
     }
 
 
@@ -52,6 +59,7 @@
         top:0;
         left:0;
         right:0;
+        height: 100px;
     }
 
     .right-align {
@@ -59,10 +67,22 @@
     }
 
     .icon {
-        height:16px;
+        padding-right: 16px;
+        height: 100%;
+        display: flex;
+    }
+
+    .icon img {
+        height: 50%;
+        margin: auto;
     }
 
     button {
         all: unset;
+        height: 64px;
+    }
+
+    .super{
+        z-index: 100;
     }
 </style>

@@ -59,6 +59,7 @@
     nav {
         background-color: var(--sidebar-color);
         padding: 16px;
+        padding-top: 100px;
         position: fixed;
         top: 0;
         height: 100vh;
