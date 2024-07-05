@@ -42,7 +42,7 @@
 
             <h3 in:fly={{ delay: 0, duration: 1000, x: 100, opacity: 0.0 }}
                 style:--moniker-color={primary_color}>
-                {arcana.tarot}&#x300E;{number_to_roman_numeral(arcana.rank)}&#x300F;
+                {arcana.tarot} &#xFF62;{number_to_roman_numeral(arcana.rank)}&#xFF63;
             </h3>
         {/key}
         <br/>
