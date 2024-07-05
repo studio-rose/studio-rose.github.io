@@ -1,7 +1,7 @@
 {
-  "name": "Base",
-  "id": "base",
-  "primary_color": "#000000",
+  "name": "Hammurabi",
+  "id": "hammurabi",
+  "primary_color": "#ffff00",
   "secondary_color": "#000000",
   
   "characteristics": {
@@ -19,10 +19,10 @@
     "color": "XX"
   },
   "arcana": {
-    "status": "XX",
-    "rank": "XX",
-    "tarot": "XX",
-    "relic": "XX"
+    "status": "Inactive",
+    "rank": "15",
+    "tarot": "The Emperor",
+    "relic": "The Spear"
   },
   "attributes": {
   

@@ -2,10 +2,10 @@
     import {base} from "$app/paths";
     import { page } from '$app/stores';
     import {fly, fade } from 'svelte/transition';
-    import {onMount} from "svelte";
+    import {number_to_roman_numeral} from '$lib/utils.js';
 
     export let data;
-    $: ({name, arcana, primary_color, secondary_color} = data.character);
+    $: ({id, name, arcana, primary_color, secondary_color} = data.character);
 
     let displayed_tab = "Overview";
     $: (displayed_tab = $page.url.pathname.split("/").pop());
@@ -13,6 +13,20 @@
     let runes = Array.from({length: 32}, v => "&#x16" + Math.floor(Math.random() * 5 + 10).toString(16) + Math.floor(Math.random() * 16).toString(16) + ";").join("");
     let test_value = 0;
     $: test_value = data.character.id;
+
+    const character_navigation_order = ["silver", "echo", "narcissus", "pandora", "melody", "horus", "anubis", "kamui", "hammurabi"];
+    let next_page = "base";
+    let prev_page = "base";
+    $: next_page = character_navigation_order[mod(character_navigation_order.indexOf(id) + 1, character_navigation_order.length)] || "base";
+    $: prev_page = character_navigation_order[mod(character_navigation_order.indexOf(id) - 1, character_navigation_order.length)] || "base";
+
+    function mod(n, m) {
+        return ((n % m) + m) % m;
+    }
+
+    function capitalize(str){
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
 
 </script>
 
@@ -28,10 +42,15 @@
 
             <h3 in:fly={{ delay: 0, duration: 1000, x: 100, opacity: 0.0 }}
                 style:--moniker-color={primary_color}>
-                {arcana.tarot}
+                {arcana.tarot}&#x300E;{number_to_roman_numeral(arcana.rank)}&#x300F;
             </h3>
         {/key}
         <br/>
+    </div>
+
+    <div class="character-rotation">
+        <a style="" href="/characters/{prev_page}">&#171;{capitalize(prev_page)}</a>
+        <a style="margin-left: auto;" href="/characters/{next_page}">{capitalize(next_page)}&#187;</a>
     </div>
 
     <div class="character-content">
@@ -134,16 +153,20 @@
     }
 
     .content {
-        margin: 0 8px 8px 8px;
-        padding:4px;
-        border: 2px solid var(--content-border-color);
+        margin: 0;
+        padding: 2px;
+        border-top: 2px solid var(--content-border-color);
         overflow:auto;
     }
 
-    .highlighted-runes{
+    .highlighted-runes {
         color: white;
         text-shadow: 0 0 4px black;
         white-space: nowrap;
+    }
+
+    .character-rotation {
+        display: flex;
     }
 
 </style>

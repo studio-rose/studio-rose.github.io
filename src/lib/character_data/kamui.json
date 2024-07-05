@@ -1,7 +1,7 @@
 {
-  "name": "Base",
-  "id": "base",
-  "primary_color": "#000000",
+  "name": "Kamui",
+  "id": "kamui",
+  "primary_color": "#36013F",
   "secondary_color": "#000000",
   
   "characteristics": {
@@ -19,10 +19,10 @@
     "color": "XX"
   },
   "arcana": {
-    "status": "XX",
-    "rank": "XX",
-    "tarot": "XX",
-    "relic": "XX"
+    "status": "Disavowed",
+    "rank": "0",
+    "tarot": "The Fool",
+    "relic": "None"
   },
   "attributes": {
   

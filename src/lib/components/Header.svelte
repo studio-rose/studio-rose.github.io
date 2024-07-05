@@ -79,7 +79,8 @@
 
     button {
         all: unset;
-        height: 64px;
+        height: 32px;
+        padding: 8px;
     }
 
     .super{

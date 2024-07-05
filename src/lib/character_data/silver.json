@@ -1,7 +1,7 @@
 {
-  "name": "Base",
-  "id": "base",
-  "primary_color": "#000000",
+  "name": "Silver",
+  "id": "silver",
+  "primary_color": "#aaaaaa",
   "secondary_color": "#000000",
   
   "characteristics": {
@@ -20,9 +20,9 @@
   },
   "arcana": {
     "status": "XX",
-    "rank": "XX",
-    "tarot": "XX",
-    "relic": "XX"
+    "rank": "0",
+    "tarot": "The Fool",
+    "relic": "None"
   },
   "attributes": {
   
