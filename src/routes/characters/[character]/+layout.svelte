@@ -49,8 +49,8 @@
     </div>
 
     <div class="character-rotation">
-        <a style="" href="/characters/{prev_page}">&#171;{capitalize(prev_page)}</a>
-        <a style="margin-left: auto;" href="/characters/{next_page}">{capitalize(next_page)}&#187;</a>
+        <a style="" href="{base}/characters/{prev_page}">&#171;{capitalize(prev_page)}</a>
+        <a style="margin-left: auto;" href="{base}/characters/{next_page}">{capitalize(next_page)}&#187;</a>
     </div>
 
     <div class="character-content">
