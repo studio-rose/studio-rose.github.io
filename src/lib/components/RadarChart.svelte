@@ -21,13 +21,14 @@
         LineElement,
         Filler
     );
-    export let primary_color;
+    export let primary_color = "#ffffffaa";
     export let traits = [];
     export let values = [];
 
+
     let radar_data = {};
 
-    const tier_mapping = {
+    const number_to_tier_mapping = new Map(Object.entries({
         0: "E",
         0.5: "E+",
         1: "D",
@@ -41,11 +42,16 @@
         5: "S",
         5.5: "S+",
         6: "S++"
-    }
+    }));
 
-    let data_points = [];
-    $: data_points = values;
-    $: {radar_data.datasets[0].data = values;}
+    const tier_to_number_mapping  = new Map(Array.from(number_to_tier_mapping, a => a.toReversed()));
+
+    $: data_points = map_tiers_to_numbers(values);
+    $: radar_data.datasets[0].data = map_tiers_to_numbers(values);
+
+    function map_tiers_to_numbers(v){
+        return v.map(t => Number(tier_to_number_mapping.get(t)));
+    }
 
     const options = {
         responsive: true,
@@ -72,7 +78,8 @@
             tooltip: {
                 callbacks: {
                     label: function(context){
-                        return tier_mapping[context.parsed.r];
+                        console.log(context.parsed.r);
+                        return number_to_tier_mapping.get(context.parsed.r.toString());
                     }
                 },
                 bodyAlign: 'center',

@@ -1,7 +1,7 @@
 <script>
     import {base} from "$app/paths";
     import {slide, fade} from 'svelte/transition';
-    import { display_sidebar } from '$lib/stores.js';
+    import { display_sidebar, arcana_color } from '$lib/stores.js';
 
     let character_links = [
         {link: "silver", name: "Silver"},
@@ -38,20 +38,21 @@
             class="modal">
 
     </button>
-    <nav transition:slide={{delay: 0, duration: 400, axis: 'x'}}>
-        <u>Characters</u><br/>
+    <nav style:--sidebar-arcana-color={$arcana_color} transition:slide={{delay: 0, duration: 400, axis: 'x'}}>
         <ul>
             {#each character_links as link}
                 <li><a on:click={()=>{display_sidebar.set(false)}} href="{base}/characters/{link.link}">{link.name}</a></li>
             {/each}
         </ul>
 
+        <!--
         <u>Events</u><br/>
         <ul>
             {#each event_links as link}
                 <li><a href="{base}">{link.name}</a></li>
             {/each}
         </ul>
+        -->
     </nav>
 {/if}
 
@@ -64,11 +65,26 @@
         top: 0;
         height: 100vh;
         border-right: 4px solid var(--sidebar-accent-color);
+        /* border-right: 4px solid var(--sidebar-arcana-color); */
+        font-size: 1.5em;
+        width: 300px;
     }
 
     ul {
         margin: 0;
         padding-left: 16px;
+        list-style-type: "\2B17";
+
+    }
+
+    li > a {
+        padding-left: 0;
+        transition: .4s;
+    }
+
+    li:hover > a {
+        padding-left: 8px;
+        color: var(--sidebar-accent-color);
     }
 
     a {
@@ -78,13 +94,8 @@
 
     a:link, a:visited {
         color: white;
-        text-align: center;
         text-decoration: none;
         display: inline-block;
-    }
-
-    a:hover, a:active {
-        background-color: #5e5e6e;
     }
 
     .modal {

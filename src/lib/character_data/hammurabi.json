@@ -25,6 +25,14 @@
     "relic": "The Spear"
   },
   "attributes": {
-  
+    "Base Form" : {
+      "Description": "Base",
+      "Strength": "C",
+      "Agility": "C",
+      "Intelligence": "C",
+      "Talisman": "C",
+      "Magic": "C",
+      "Constitution": "C"
+    }
   }
 }

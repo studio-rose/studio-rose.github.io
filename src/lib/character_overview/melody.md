@@ -10,18 +10,17 @@ specializing in defense projections.  &#x263D;
 &#x16A3; [Horus](./characters/horus) <br/>
 &#x16A4; [Anubis](./characters/anubis) <br/>
 
-![Alt Text](src/lib/character_images/melody.png)
 
 ## Curse
 The Glyph of Mana Control
 
+## Relic
+#### The Book
+The Book is the signature Relic of the Magician. Under Melody's control, it can absorb a limitless amount of magical power in exchange for information. Because the Book cannot be overloaded, this allows it to be used to siphon off Melody's immense magical reserves at no risk to the surrounding environment. This effect is only active when the Book is open.
 
 ## Abilities
 #### Magical Reserves
 Melody's magical power generation surpasses all known limits. Without a proper conduit for using the magic, it will build up and run haywire.
-
-#### Relic Mastery
-The Book is the signature Relic of the Magician. Under Melody's control, it can absorb a limitless amount of magical power in exchange for information. Because the Book cannot be overloaded, this allows it to be used to siphon off Melody's immense magical reserves at no risk to the surrounding environment. This effect is only active when the Book is open.
 
 #### Defense Projection
 A series of magical shields and barriers that are impenetrable by most weapons and abilities. These can be created

@@ -1,13 +1,10 @@
 export function number_to_roman_numeral(num) {
-    if (isNaN(num))
+    if (isNaN(num)) {
         return NaN;
-    var digits = String(+num).split(""),
-        key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
-            "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
-            "","I","II","III","IV","V","VI","VII","VIII","IX"],
-        roman = "",
-        i = 3;
-    while (i--)
-        roman = (key[+digits.pop() + (i * 10)] || "") + roman;
-    return Array(+digits.join("") + 1).join("M") + roman;
+    }
+    const mapping = ["0", "I", "II", "III", "IV", "V","VI","VII","VIII","IX", "X", "XI", "XII", "XIII", "XIV", "XV","XVI","XVII","XVIII","XIX","XX","XXI"];
+    if(num >= 0 && num <= 21){
+        return mapping[num];
+    }
+    return "";
 }

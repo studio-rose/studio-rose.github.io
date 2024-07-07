@@ -1,21 +1,21 @@
 <script>
-    import logo from '$lib/icons/icon.svg'
+    import StudioLogo from '$lib/icons/studio-logo.svelte'
     import Icon_menu from '$lib/icons/menu.svelte'
     import icon_email from '$lib/icons/email.svg'
     import icon_reddit from '$lib/icons/reddit.svg'
     import icon_twitter from '$lib/icons/twitter.svg'
-    import { display_sidebar } from '$lib/stores.js';
+    import {arcana_color, display_sidebar} from '$lib/stores.js';
 
     let condition = false;
 </script>
 
 <header class>
     <div class="content">
-        <button class="super" on:click={()=>{display_sidebar.set(!$display_sidebar);}}>
-            <Icon_menu condition={$display_sidebar} />
+        <button class="menu-icon-top" on:click={()=>{display_sidebar.set(!$display_sidebar);}}>
+            <Icon_menu class="menu-icon" condition={$display_sidebar} />
         </button>
 
-        <img class="logo" src={logo} alt="logo"/>
+        <StudioLogo --center-icon-color={$arcana_color} />
         <span>Team Eos and Astraeus</span>
 
         <div class="icon right-align">
@@ -41,11 +41,6 @@
         background-color: var(--header-color);
         position: relative;
     }
-
-    .menu-icon {
-
-    }
-
 
     span {
         font-weight: bold;
@@ -83,7 +78,7 @@
         padding: 8px;
     }
 
-    .super{
+    .menu-icon-top{
         z-index: 100;
     }
 </style>

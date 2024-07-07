@@ -27,21 +27,12 @@
   "attributes": {
     "Base Form" : {
       "Description": "Base Form. Anubis has kept the majority of his power since the Fall, and the Underworld serves only to strengthen him",
-      "Strength": 4,
-      "Agility": 4,
-      "Intelligence": 4,
-      "Talisman": 5,
-      "Magic": 3,
-      "Constitution": 4
-    },
-    "The Last" : {
-      "Description": "The Last Arcana. After learning that all other Arcana are dead, Anubis releases his final form",
-      "Strength": 5,
-      "Agility": 5,
-      "Intelligence": 5,
-      "Talisman": 5,
-      "Magic": 5,
-      "Constitution": 5
+      "Strength": "B",
+      "Agility": "A",
+      "Intelligence": "B",
+      "Talisman": "A",
+      "Magic": "B",
+      "Constitution": "A+"
     }
   }
 }

@@ -3,12 +3,15 @@
     import { page } from '$app/stores';
     import {fly, fade } from 'svelte/transition';
     import {number_to_roman_numeral} from '$lib/utils.js';
+    import {arcana_color} from "$lib/stores.js";
 
     export let data;
     $: ({id, name, arcana, primary_color, secondary_color} = data.character);
 
     let displayed_tab = "Overview";
     $: (displayed_tab = $page.url.pathname.split("/").pop());
+
+    $: arcana_color.set(primary_color);
 
     let runes = Array.from({length: 32}, v => "&#x16" + Math.floor(Math.random() * 5 + 10).toString(16) + Math.floor(Math.random() * 16).toString(16) + ";").join("");
     let test_value = 0;

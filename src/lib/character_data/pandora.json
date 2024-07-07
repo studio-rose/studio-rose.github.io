@@ -26,31 +26,13 @@
   },
   "attributes": {
     "Base Form" : {
-      "Description": "Desc",
-      "Strength": 5,
-      "Agility": 5,
-      "Intelligence": 4,
-      "Talisman": 2,
-      "Magic": 3,
-      "Constitution": 2
-    },
-    "Lyna Form" : {
-      "Description": "Desc",
-      "Strength": 2,
-      "Agility": 2,
-      "Intelligence": 5,
-      "Talisman": 2,
-      "Magic": 2,
-      "Constitution": 3
-    },
-    "Underworld Risen" : {
-      "Description": "Desc",
-      "Strength": 6,
-      "Agility": 5,
-      "Intelligence": 3,
-      "Talisman": 2,
-      "Magic": 3,
-      "Constitution": 0
+      "Description": "Base",
+      "Strength": "C",
+      "Agility": "C",
+      "Intelligence": "C",
+      "Talisman": "C",
+      "Magic": "C",
+      "Constitution": "C"
     }
   }
 }

@@ -18,20 +18,17 @@
         transform-origin: center;
     }
     .middle {
-        fill: white;
         transform-box: content-box;
         transform-origin: center;
         transform: rotate(90deg);
     }
 
     .top {
-        fill: white;
         transform-box: content-box;
         transform-origin: center;
         transform: translateY(5px) rotate(-30deg);
     }
     .bottom {
-        fill: white;
         transform-box: content-box;
         transform-origin: center;
         transform: translateY(-5px) rotate(30deg);
