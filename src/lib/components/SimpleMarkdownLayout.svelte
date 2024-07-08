@@ -30,7 +30,11 @@
     let renderer = new marked.Renderer();
     renderer.heading = function(text, level, raw) {
         let anchor = normalize_id(raw);
-        return '<h' + level + ' id="' + anchor + '">' + text + '</h' + level + '>\n';
+        let header = '<h' + level + ' id="' + anchor + '">' + text + '</h' + level + '>\n';
+        if(level === 2){
+            header += '<hr />';
+        }
+        return header;
     };
 
     function postprocess(html) {
@@ -73,8 +77,6 @@
 
     .markdown :global(h2)  {
         margin-bottom:0;
-        border-bottom: 1px solid white;
-        overflow: hidden;
         font-weight: bold;
         font-size: 1.8rem;
     }
