@@ -44,7 +44,7 @@
         6: "S++"
     }));
 
-    const tier_to_number_mapping  = new Map(Array.from(number_to_tier_mapping, a => a.toReversed()));
+    const tier_to_number_mapping  = new Map(Array.from(number_to_tier_mapping, a => [...a].reverse()));
 
     $: data_points = map_tiers_to_numbers(values);
     $: radar_data.datasets[0].data = map_tiers_to_numbers(values);
