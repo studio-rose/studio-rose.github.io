@@ -1,1 +1,0 @@
-const t={path:"melody",description:"Original sprite artwork"},i={path:"sprite_melody",description:"Original sprite artwork"},r={path:"anubis",description:"Original sprite artwork"},s={sprite:t,sprite2:i,sprite3:r};export{s as default,t as sprite,i as sprite2,r as sprite3};
