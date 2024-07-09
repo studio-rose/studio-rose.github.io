@@ -41,10 +41,9 @@
         {#key test_value}
             <h2 in:fly={{ delay: 0, duration: 1000, x: -100, opacity: 0.0 }}>{name}</h2>
             <!-- hr style="--bar-color: {primary_color}"/ -->
-            <div in:fade={{ delay: 200, duration: 800 }} class="notranslate highlighted-runes">{@html runes}</div>
+            <div in:fade={{ delay: 200, duration: 800 }} style:color={primary_color} class="notranslate highlighted-runes">{@html runes}</div>
 
-            <h3 in:fly={{ delay: 0, duration: 1000, x: 100, opacity: 0.0 }}
-                style:--moniker-color={primary_color}>
+            <h3 in:fly={{ delay: 0, duration: 1000, x: 100, opacity: 0.0 }}>
                 {arcana.tarot} &#xFF62;{number_to_roman_numeral(arcana.rank)}&#xFF63;
             </h3>
         {/key}
@@ -122,8 +121,8 @@
     .character-name h3 {
         padding: 0px;
         margin: 0px;
-        font-size: 2em;
-        color: var(--moniker-color);
+        font-size: 1.2em;
+        color: #ffffff88;
     }
 
     a {

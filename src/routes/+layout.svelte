@@ -48,6 +48,8 @@
 
         --radar-button-color: #404040;
         --radar-button-border-color: #858585;
+
+        --bullet-icon: "\2B17  ";
     }
 
 </style>

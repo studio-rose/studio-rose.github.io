@@ -73,7 +73,7 @@
     ul {
         margin: 0;
         padding-left: 16px;
-        list-style-type: "\2B17";
+        list-style-type: var(--bullet-icon);
 
     }
 

@@ -48,7 +48,7 @@
     }
 
     ul {
-        list-style-type: "\2B17";
+        list-style-type: var(--bullet-icon);
     }
     li::marker{
         color: white;
