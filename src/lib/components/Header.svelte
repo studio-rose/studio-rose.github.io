@@ -15,9 +15,12 @@
             <Icon_menu class="menu-icon" condition={$display_sidebar} />
         </button>
 
-        <StudioLogo --center-icon-color={$arcana_color} />
-        <span>Team Eos and Astraeus</span>
 
+        <span>Studio Eos & Astraeus</span>
+        <div class="spacer"></div>
+        <StudioLogo --center-icon-color={$arcana_color} />
+
+        <!--
         <div class="icon right-align">
             <img src={icon_email} alt="email"/>
         </div>
@@ -29,6 +32,7 @@
         <div class="icon">
             <img src={icon_twitter} alt="twitter"/>
         </div>
+        -->
     </div>
 </header>
 
@@ -40,6 +44,7 @@
         height: 100%;
         background-color: var(--header-color);
         position: relative;
+        padding: 8px;
     }
 
     span {
@@ -57,21 +62,6 @@
         height: 100px;
     }
 
-    .right-align {
-        margin-left: auto;
-    }
-
-    .icon {
-        padding-right: 16px;
-        height: 100%;
-        display: flex;
-    }
-
-    .icon img {
-        height: 50%;
-        margin: auto;
-    }
-
     button {
         all: unset;
         height: 32px;
@@ -81,4 +71,10 @@
     .menu-icon-top{
         z-index: 100;
     }
+
+    .spacer{
+        flex-grow: 1;
+    }
+
+
 </style>

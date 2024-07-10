@@ -50,6 +50,8 @@
         --radar-button-border-color: #858585;
 
         --bullet-icon: "\2B17  ";
+
+        --title-color: #A0A0F0;
     }
 
 </style>

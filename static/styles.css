@@ -39,3 +39,8 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+@font-face {
+    font-family: "Ikaros";
+    src: url("Ikaros-Regular.otf") format("opentype");
+}

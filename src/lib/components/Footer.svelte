@@ -1,6 +1,6 @@
 <div>
-<p>Studio EaA (2024 - 2024)</p>
-<p>All rights reserved</p>
+<p>Studio Eos & Astraeus [SEA] (2024 - 2024)</p>
+<p>Website under construction</p>
 </div>
 
 <style>
