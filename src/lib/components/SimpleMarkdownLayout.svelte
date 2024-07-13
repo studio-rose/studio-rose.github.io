@@ -6,6 +6,8 @@
 
     import TableOfContents from "$lib/components/TableOfContents.svelte";
 
+    import {CustomColorExt} from "$lib/components/MarkedJSColorExtension.svelte";
+
     export let markdown_data;
 
     let headers = [];
@@ -50,6 +52,7 @@
     marked.setOptions({renderer: renderer});
     marked.use({ walkTokens, async:false, hooks: { preprocess, postprocess }  });
     marked.use(baseUrl($page.url.origin));
+    marked.use({extensions: [CustomColorExt]});
 
     function normalize_id(str) {
         return slug(str);
