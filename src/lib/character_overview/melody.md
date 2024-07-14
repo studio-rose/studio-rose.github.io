@@ -1,18 +1,25 @@
 ## Overview
 Melody is the current Magician of the Arcana, and wielder of the Book relic. Though physically weak, she possesses
 an immeasurable amount of mana, that constantly needs to be siphoned off. Melody is adept at most forms of magic,
-specializing in defense projections.  &#x263D;
+specializing in defense projections.
+
 
 ## See Also
-&#x16a0; [Narcissus](./characters/narcissus) <br/>
-&#x16A1; [Pandora](./characters/pandora) <br/>
-&#x16A2; [Melody](./characters/melody) <br/>
-&#x16A3; [Horus](./characters/horus) <br/>
-&#x16A4; [Anubis](./characters/anubis) <br/>
+[Narcissus](./characters/narcissus) <br/>
+[Pandora](./characters/pandora) <br/>
+[Melody](./characters/melody) <br/>
+[Horus](./characters/horus) <br/>
+[Anubis](./characters/anubis) <br/>
 
 
 ## Curse
-The Glyph of Mana Control
+The Glyph of Mana Control. 
+
+
+## Motivation
+Keep Echo safe under any circumstances. In Melody's cycle after failing to protect the duo, she tries to bring them to Babylon for sancturary under Hammurabi.  
+
+
 
 ## Relic
 #### The Book

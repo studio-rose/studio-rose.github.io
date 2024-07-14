@@ -6,12 +6,12 @@
   
   "characteristics": {
     "age": "XX",
-    "race": "XX",
-    "gender": "XX",
-    "hair_color": "XX",
-    "eye_color": "XX",
-    "height": "XX",
-    "weight": "XX"
+    "race": "Human",
+    "gender": "Female ♀",
+    "hair_color": "Yellow",
+    "eye_color": "Blue",
+    "height": "N/A",
+    "weight": "N/A"
   },
   "trivia": {
     "birthday": "XX",
