@@ -48,6 +48,8 @@
 
     $: data_points = map_tiers_to_numbers(values);
     $: radar_data.datasets[0].data = map_tiers_to_numbers(values);
+    $: radar_data.datasets[0].backgroundColor = primary_color;
+    $: radar_data.datasets[0].pointBackgroundColor = primary_color;
 
     function map_tiers_to_numbers(v){
         return v.map(t => Number(tier_to_number_mapping.get(t)));

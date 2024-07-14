@@ -51,8 +51,8 @@
     </div>
 
     <div class="character-rotation">
-        <a style="" href="{base}/characters/{prev_page}">&#171;{capitalize(prev_page)}</a>
-        <a style="margin-left: auto;" href="{base}/characters/{next_page}">{capitalize(next_page)}&#187;</a>
+        <a data-sveltekit-noscroll style="" href="{base}/characters/{prev_page}/{displayed_tab}">&#171;{capitalize(prev_page)}</a>
+        <a data-sveltekit-noscroll style="margin-left: auto;" href="{base}/characters/{next_page}/{displayed_tab}">{capitalize(next_page)}&#187;</a>
     </div>
 
     <div class="character-content">
