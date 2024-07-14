@@ -26,12 +26,21 @@
   },
   "attributes": {
     "Base Form" : {
-      "Description": "Base Form. Anubis has kept the majority of his power since the Fall, and the Underworld serves only to strengthen him",
+      "Description": "Anubis is strengthened by the souls of the Underworld, thus remaining as a powerful entity even after the Fall.",
       "Strength": "B",
       "Agility": "A",
       "Intelligence": "B",
       "Talisman": "A",
       "Magic": "B",
+      "Constitution": "A+"
+    },
+    "The Last Arcana" : {
+      "Description": "Absorbing the souls of the fallen Arcana, Anubis can temporarily max out their primary attributes",
+      "Strength": "S",
+      "Agility": "S",
+      "Intelligence": "A",
+      "Talisman": "S",
+      "Magic": "S",
       "Constitution": "A+"
     }
   }

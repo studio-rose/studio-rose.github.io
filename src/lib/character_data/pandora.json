@@ -26,13 +26,31 @@
   },
   "attributes": {
     "Base Form" : {
-      "Description": "Base",
-      "Strength": "C",
-      "Agility": "C",
+      "Description": "Pandora's base stats reflect a heavy emphasis on physical stats while lacking in the mental arts.",
+      "Strength": "A",
+      "Agility": "A+",
       "Intelligence": "C",
-      "Talisman": "C",
-      "Magic": "C",
-      "Constitution": "C"
+      "Talisman": "D",
+      "Magic": "D",
+      "Constitution": "D"
+    },
+    "Lyna" : {
+      "Description": "Pandora's disguise, known as Lyna, during her time undercover in the Village",
+      "Strength": "E+",
+      "Agility": "E+",
+      "Intelligence": "C",
+      "Talisman": "E+",
+      "Magic": "E+",
+      "Constitution": "D"
+    },
+    "Underworld Rising" : {
+      "Description": "Harnessing the spirits of the Underworld during the invasion of the Village allows Pandora to boost her physical attributes to the maximum.",
+      "Strength": "S++",
+      "Agility": "S++",
+      "Intelligence": "C",
+      "Talisman": "D",
+      "Magic": "D",
+      "Constitution": "E+"
     }
   }
 }

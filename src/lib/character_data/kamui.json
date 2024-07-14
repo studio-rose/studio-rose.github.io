@@ -26,13 +26,31 @@
   },
   "attributes": {
     "Base Form" : {
-      "Description": "Base",
+      "Description": "Base Form description",
       "Strength": "C",
       "Agility": "C",
       "Intelligence": "C",
       "Talisman": "C",
       "Magic": "C",
       "Constitution": "C"
+    },
+    "Avatar of Time" : {
+      "Description": "Avatar of Time description",
+      "Strength": "A",
+      "Agility": "A",
+      "Intelligence": "A",
+      "Talisman": "B",
+      "Magic": "S",
+      "Constitution": "A"
+    },
+    "True Dagon" : {
+      "Description": "True Dagon description",
+      "Strength": "S+",
+      "Agility": "S+",
+      "Intelligence": "A+",
+      "Talisman": "A",
+      "Magic": "S+",
+      "Constitution": "B+"
     }
   }
 }

@@ -34,23 +34,23 @@
       "Magic": "S",
       "Constitution": "C"
     },
-    "Prime Form" : {
-      "Description": "Melody's form before the Fall. Physically stronger than her base form, and with a higher constitution.",
+    "Prime Arcana" : {
+      "Description": "Melody's Prime Arcana form before the Fall. Mildly physically stronger than her base form, and with a higher constitution.",
       "Strength": "C",
       "Agility": "C",
       "Intelligence": "A+",
       "Talisman": "A+",
       "Magic": "S+",
-      "Constitution": "B"
+      "Constitution": "A"
     },
-    "Akashic Mode" : {
-      "Description": "Activated by closing the Book, this mode is an explosion of magical power, this form temporarily trades constitution for Angelic-level power",
+    "Akashic Collapse" : {
+      "Description": "Activated by closing the Book, this form boosts Melody's stats to their full potential. Akashic Collapse acts like a fission reaction, burning magic as quickly as it is produced, and can only be maintained for a few moments at a time.",
       "Strength": "A",
       "Agility": "A+",
       "Intelligence": "A+",
       "Talisman": "A+",
       "Magic": "S++",
-      "Constitution": "D"
+      "Constitution": "B"
     }
   }
 }

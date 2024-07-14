@@ -26,12 +26,21 @@
   },
   "attributes": {
     "Base Form" : {
-      "Description": "Base",
-      "Strength": "C",
-      "Agility": "C",
+      "Description": "Base form description",
+      "Strength": "B",
+      "Agility": "D",
       "Intelligence": "C",
-      "Talisman": "C",
+      "Talisman": "B",
       "Magic": "C",
+      "Constitution": "D"
+    },
+    "Total Eclipse" : {
+      "Description": "Harnessing the power of the Eclipse, Narcissus can drastically increase his stats for its duration.",
+      "Strength": "S",
+      "Agility": "S",
+      "Intelligence": "S",
+      "Talisman": "S",
+      "Magic": "S",
       "Constitution": "C"
     }
   }
