@@ -27,11 +27,11 @@
   "attributes": {
     "Base Form" : {
       "Description": "Base Form description",
-      "Strength": "C",
-      "Agility": "C",
-      "Intelligence": "C",
+      "Strength": "B",
+      "Agility": "B",
+      "Intelligence": "B",
       "Talisman": "C",
-      "Magic": "C",
+      "Magic": "B",
       "Constitution": "C"
     },
     "Avatar of Time" : {

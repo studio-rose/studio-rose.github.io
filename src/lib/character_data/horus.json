@@ -27,12 +27,12 @@
   "attributes": {
     "Base Form" : {
       "Description": "Base form not filled out yet",
-      "Strength": "C",
-      "Agility": "C",
-      "Intelligence": "C",
+      "Strength": "A",
+      "Agility": "D",
+      "Intelligence": "B",
       "Talisman": "C",
-      "Magic": "C",
-      "Constitution": "C"
+      "Magic": "D",
+      "Constitution": "A"
     }
   }
 }

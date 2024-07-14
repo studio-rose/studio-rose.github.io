@@ -27,12 +27,12 @@
   "attributes": {
     "Base Form" : {
       "Description": "Hammurabi's base state during his tenure as The Emperor",
-      "Strength": "B",
-      "Agility": "B",
-      "Intelligence": "B",
-      "Talisman": "B",
-      "Magic": "B",
-      "Constitution": "B"
+      "Strength": "A",
+      "Agility": "A",
+      "Intelligence": "A",
+      "Talisman": "A",
+      "Magic": "A",
+      "Constitution": "A"
     },
     "Avatar of the Phoenix" : {
       "Description": "Hammurabi's form after ascending with the Glyph of Space. The most fearsome warrior the Arcana has ever seen",
